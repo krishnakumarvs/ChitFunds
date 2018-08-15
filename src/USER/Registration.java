@@ -28,7 +28,6 @@ public class Registration extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        testDayPicker1 = new com.qt.datapicker.TestDayPicker();
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -380,6 +379,5 @@ info.setVisible(true);
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private com.qt.datapicker.TestDayPicker testDayPicker1;
     // End of variables declaration//GEN-END:variables
 }
