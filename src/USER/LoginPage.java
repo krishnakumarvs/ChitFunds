@@ -106,8 +106,8 @@ public class LoginPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    Registration reg=new Registration();
-     reg.setVisible(true);
+    userHomepage home=new userHomepage();
+     home.setVisible(true);
         
 
 // TODO add your handling code here:
