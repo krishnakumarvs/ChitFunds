@@ -79,6 +79,11 @@ public class userHomepage extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 0, 255));
         jButton1.setText("Sign-Up");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(0, 51, 204));
         jButton2.setText("Login");
@@ -122,6 +127,11 @@ public class userHomepage extends javax.swing.JFrame {
 
         jLabel5.setText("Auction");
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         jMenu3.setText("HOME");
         jMenuBar2.add(jMenu3);
@@ -242,7 +252,7 @@ public class userHomepage extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -257,35 +267,40 @@ public class userHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-      
+
+   SearchChit chit=new SearchChit();
+   chit.setVisible(true);
+   this.dispose();
        /* Registration reg=new Registration();
         reg.setVisible(true);*/
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-           GoldLoan gold=new GoldLoan();
+           GOldLoanHomepage gold=new GOldLoanHomepage();
            gold.setVisible(true);
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        vechicleloan loan=new  vechicleloan();
-        loan.setVisible(true);
+       VechicleLoanHomepage page=new VechicleLoanHomepage();
+       page.setVisible(true);
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-HousingLoan loan=new HousingLoan();
-loan.setVisible(true);
+HousingLoanHomepage page=new HousingLoanHomepage();
+page.setVisible(true);
+this.dispose();
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
 
+        
         Registration reg=new Registration();
         reg.setVisible(true);
 // TODO add your handling code here:
@@ -293,8 +308,9 @@ loan.setVisible(true);
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        ChitGroup chit=new ChitGroup();
-        chit.setVisible(true);
+      SearchChit chit=new SearchChit();
+      chit.setVisible(true);
+      this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -318,6 +334,19 @@ verification.setVisible(true);
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+       ChitGroup chit =new ChitGroup();
+      chit.setVisible(true);
+      this.dispose();
+      
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

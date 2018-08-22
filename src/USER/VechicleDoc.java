@@ -58,6 +58,11 @@ public class VechicleDoc extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(0, 51, 204));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton3.setText("Cancel");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(0, 51, 204));
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
@@ -131,6 +136,12 @@ public class VechicleDoc extends javax.swing.JFrame {
         details.setVisible(true);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        System.exit(0);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
