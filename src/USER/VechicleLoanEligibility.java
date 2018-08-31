@@ -28,19 +28,22 @@ public class VechicleLoanEligibility extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("1. Age should be 21 to 65 years");
-
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel2.setText("2. Profession:Anybody with steady Source of income including bank employers,pensioners");
-
+        jButton1.setBackground(new java.awt.Color(0, 0, 204));
         jButton1.setText("Apply");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,6 +51,7 @@ public class VechicleLoanEligibility extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,35 +59,94 @@ public class VechicleLoanEligibility extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setText("SALARIED INDIVIDUALS");
+
+        jLabel1.setForeground(new java.awt.Color(255, 51, 0));
+        jLabel1.setText("*Minimum 21 years of Age");
+
+        jLabel2.setForeground(new java.awt.Color(255, 51, 0));
+        jLabel2.setText("*Maximum 70 Years of Age ");
+
+        jLabel4.setForeground(new java.awt.Color(255, 51, 0));
+        jLabel4.setText("*Income eligibility based on latest salary slip and Form 16");
+
+        jLabel5.setForeground(new java.awt.Color(255, 51, 0));
+        jLabel5.setText("*Minimum of 1 year continuous employment");
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel6.setText("SELF EMPLOYED");
+
+        jLabel7.setForeground(new java.awt.Color(255, 51, 0));
+        jLabel7.setText("*Minimum 18 years of age");
+
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("*Maximum 75 years of age at loan maturity");
+
+        jLabel9.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel9.setText("*Income eligibility based on latest Income Tax Returns");
+
+        jLabel10.setForeground(new java.awt.Color(255, 51, 0));
+        jLabel10.setText("*Minimum 3 years of employment in the same line of business");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(134, 134, 134)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(42, 42, 42)
+                .addGap(41, 41, 41)
                 .addComponent(jButton2)
-                .addGap(133, 133, 133))
+                .addGap(45, 45, 45))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(215, 215, 215)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel1)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel9)
+                                .addComponent(jLabel10)))))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel3)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(34, 34, 34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -145,6 +208,14 @@ public class VechicleLoanEligibility extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

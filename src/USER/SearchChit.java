@@ -65,7 +65,7 @@ public class SearchChit extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 204));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -93,8 +93,7 @@ public class SearchChit extends javax.swing.JFrame {
                                     .addComponent(jTextField4)
                                     .addComponent(jXDatePicker1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel7))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)

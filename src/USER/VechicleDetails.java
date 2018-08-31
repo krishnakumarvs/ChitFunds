@@ -116,7 +116,7 @@ public class VechicleDetails extends javax.swing.JFrame {
 
         jTextField14.setText("Upload");
 
-        jButton2.setBackground(new java.awt.Color(0, 51, 153));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

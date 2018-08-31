@@ -65,7 +65,7 @@ public class UserProfile extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton1.setText("Edit");
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 153));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton2.setText("Cancel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -99,8 +99,8 @@ public class UserProfile extends javax.swing.JFrame {
                 .addGap(0, 105, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(26, 26, 26)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addGap(31, 31, 31))
         );

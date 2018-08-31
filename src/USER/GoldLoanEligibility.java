@@ -36,18 +36,20 @@ public class GoldLoanEligibility extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("1.Age 21 to 65 years");
 
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
         jLabel2.setText("2. Profession:Anybody with steady Source of income including bank employers,pensioners");
 
         jLabel3.setForeground(new java.awt.Color(204, 0, 0));
         jLabel3.setText("3. Customer must haveMinimumgold of 20 grams");
 
+        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
         jLabel4.setText("4. ");
 
         jLabel5.setForeground(new java.awt.Color(204, 0, 0));
@@ -56,7 +58,7 @@ public class GoldLoanEligibility extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(204, 0, 0));
         jLabel6.setText("term you can pay the complete borrow amount in a single shot.");
 
-        jButton1.setBackground(new java.awt.Color(0, 51, 153));
+        jButton1.setBackground(new java.awt.Color(0, 102, 153));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton1.setText("Apply");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +67,7 @@ public class GoldLoanEligibility extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 204));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,34 +75,45 @@ public class GoldLoanEligibility extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel7.setText("ELIGIBILITY CRITERIA");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
                 .addGap(70, 70, 70))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
@@ -116,7 +129,7 @@ public class GoldLoanEligibility extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pack();
@@ -180,5 +193,6 @@ public class GoldLoanEligibility extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

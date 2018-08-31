@@ -28,18 +28,13 @@ public class VechicleLoanFeatures extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("1.Low Interst Rate");
-
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel2.setText("2.No Processing Fee");
 
         jButton1.setBackground(new java.awt.Color(51, 0, 204));
         jButton1.setText("Apply");
@@ -49,7 +44,7 @@ public class VechicleLoanFeatures extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 0, 204));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,31 +52,44 @@ public class VechicleLoanFeatures extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel3.setText("1. Available for both  salaried and Selfemployed ");
+
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("2. Vechicle Loan granted to age group between 21 to 65 years  ");
+
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("3.Maximum Tenure of loan is 7 years.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addContainerGap(153, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(31, 31, 31)
                 .addComponent(jButton2)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(52, 52, 52)
+                .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -147,5 +155,6 @@ public class VechicleLoanFeatures extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

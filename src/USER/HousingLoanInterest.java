@@ -30,6 +30,10 @@ public class HousingLoanInterest extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,21 +53,55 @@ public class HousingLoanInterest extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setText("1. For Women 8.30% to 8.6% ");
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel2.setText("For General Customers 8.35% to 8.65%");
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel3.setText("2.Processsing fee:0.35 of Loan Amount,min of 2000to max of 10,000");
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel4.setText("(plus applicable tax)");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(207, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(48, 48, 48)
                 .addComponent(jButton2)
                 .addGap(23, 23, 23))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel4))
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(168, Short.MAX_VALUE)
+                .addGap(47, 47, 47)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -127,5 +165,9 @@ public class HousingLoanInterest extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

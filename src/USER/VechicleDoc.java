@@ -55,7 +55,7 @@ public class VechicleDoc extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton2.setText("Upload");
 
-        jButton3.setBackground(new java.awt.Color(0, 51, 204));
+        jButton3.setBackground(new java.awt.Color(255, 0, 0));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton3.setText("Cancel");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +64,7 @@ public class VechicleDoc extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 51, 204));
+        jButton4.setBackground(new java.awt.Color(255, 0, 0));
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {

@@ -28,22 +28,35 @@ public class VechicleLoanRequiredDoc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
+        jButton2.setText("Back");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setBackground(new java.awt.Color(255, 0, 51));
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("1.Proof of Identity: Aadhar Card,Voter Id card,Driving license");
-
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel2.setText("2.Proof of Address: Electercity Bill,Rashion Card,Water Bill");
 
         jButton1.setBackground(new java.awt.Color(0, 0, 153));
         jButton1.setText("Apply");
@@ -53,61 +66,160 @@ public class VechicleLoanRequiredDoc extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 0, 153));
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel6.setText("SALARIED INDIVIDUALS");
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel1.setText("*identity Proof");
+
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText(" Aadhar Card,Passport, PAN Card,Voters ID Card, Driving License");
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel9.setText("* Latest Salry Slip");
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel8.setText("* address proof");
+
+        jLabel10.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel10.setText(" Aadhar Card,Ration Card,Driving Licens");
+
+        jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel17.setText("SELF EMPLOYED");
+
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel19.setText("*identity Proof");
+
+        jLabel18.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel18.setText(" Aadhar Card,Passport, PAN Card, Voters ID Card, Driving License");
+
+        jLabel24.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel24.setText("* Latest IncomeTax Returns as Income Proof");
+
+        jLabel25.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel25.setText("*documents as address proof");
+
+        jLabel26.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel26.setText(" Aadhar Card,.Ration Card,Driving License,Voters ID Card");
+
+        jLabel33.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel33.setText("* Bank Statements");
+
+        jButton3.setBackground(new java.awt.Color(0, 0, 204));
+        jButton3.setText("Back");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
-        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel3.setText("3. Passport Size photographs");
+        jLabel34.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel34.setText("Voters ID Card,Passport,.Telephone Bill,.Electercity Bill");
 
-        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel4.setText("4. Bank statement");
+        jLabel11.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel11.setText("Passport,Telephone Bill,Electercity Bill");
 
-        jLabel5.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel5.setText("5. Income proof");
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel3.setText("*Photographs");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(71, 71, 71))
             .addGroup(layout.createSequentialGroup()
-                .addGap(81, 81, 81)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addContainerGap(16, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel17))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addGap(62, 62, 62)
+                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel24)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(283, 283, 283)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel33)))
+                .addGap(90, 90, 90))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(65, 65, 65)
+                .addComponent(jButton3)
+                .addGap(162, 162, 162))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(261, 261, 261)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel34)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addGap(2, 2, 2)
-                .addComponent(jLabel4)
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel10))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel34)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel17)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel18))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel24)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel26))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11)
+                .addGap(16, 16, 16)
+                .addComponent(jLabel33)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel3)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(56, 56, 56))
+                    .addComponent(jButton3))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -127,6 +239,14 @@ public class VechicleLoanRequiredDoc extends javax.swing.JFrame {
        this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+     VechicleLoanHomepage page=new VechicleLoanHomepage();
+     page.setVisible(true);
+     this.dispose();
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,10 +286,22 @@ public class VechicleLoanRequiredDoc extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

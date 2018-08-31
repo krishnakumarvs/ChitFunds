@@ -32,9 +32,14 @@ public class VechicleLoanHomepage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("Features");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -42,7 +47,11 @@ public class VechicleLoanHomepage extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(20, 80, 80, 17);
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setText("Eligibility");
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -50,7 +59,11 @@ public class VechicleLoanHomepage extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(20, 110, 80, 17);
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 153));
         jLabel3.setText("Document Required");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -58,7 +71,11 @@ public class VechicleLoanHomepage extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(20, 140, 140, 17);
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 153));
         jLabel4.setText("interest Rate");
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -66,32 +83,12 @@ public class VechicleLoanHomepage extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(0, 288, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addContainerGap(112, Short.MAX_VALUE))
-        );
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(20, 170, 100, 20);
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 10, 0, 40);
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-130, -20, 930, 490);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -164,5 +161,7 @@ eligibility.setVisible(true);
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

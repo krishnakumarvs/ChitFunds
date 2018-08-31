@@ -67,7 +67,7 @@ public class PaymentHistory extends javax.swing.JFrame {
 
         jLabel8.setText("Time");
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 204));
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton1.setText("Cancel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

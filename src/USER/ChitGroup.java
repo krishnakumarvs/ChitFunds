@@ -64,7 +64,7 @@ public class ChitGroup extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 204));
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton1.setText("Cancel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +73,7 @@ public class ChitGroup extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 204));
+        jButton2.setBackground(new java.awt.Color(0, 0, 153));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton2.setText("Apply");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -98,14 +98,14 @@ public class ChitGroup extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
-                .addGap(80, 80, 80))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,9 +117,9 @@ public class ChitGroup extends javax.swing.JFrame {
                         .addComponent(jButton2)))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addGap(0, 111, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 100, Short.MAX_VALUE))
         );
 
         pack();

@@ -60,8 +60,10 @@ public class MyProfile extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tekton Pro Cond", 1, 36)); // NOI18N
         jLabel1.setText("WELCOME...");
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel2.setText("Name");
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel3.setText("Address");
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -70,6 +72,7 @@ public class MyProfile extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel4.setText("Gender");
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
@@ -78,12 +81,16 @@ public class MyProfile extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel5.setText("Email");
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel6.setText("Mobile No");
 
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel8.setText("AnnualIncome");
 
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel9.setText("Date Of Birth");
 
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
@@ -92,15 +99,17 @@ public class MyProfile extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel10.setText("Occupation");
 
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jLabel11.setText("User Name");
 
         jButton1.setBackground(new java.awt.Color(0, 0, 153));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton1.setText("Edit");
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 204));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton2.setText("Cancel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -109,9 +118,10 @@ public class MyProfile extends javax.swing.JFrame {
             }
         });
 
+        jLabel12.setIcon(new javax.swing.ImageIcon("F:\\MAIN PROJECT PREPARATION\\images\\username.png")); // NOI18N
         jLabel12.setText("Photo");
 
-        jButton3.setBackground(new java.awt.Color(0, 51, 204));
+        jButton3.setBackground(new java.awt.Color(204, 0, 0));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -171,19 +181,19 @@ public class MyProfile extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(160, Short.MAX_VALUE))
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(38, 38, 38)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -222,7 +232,7 @@ public class MyProfile extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)

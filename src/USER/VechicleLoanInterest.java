@@ -45,7 +45,7 @@ public class VechicleLoanInterest extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 0, 204));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

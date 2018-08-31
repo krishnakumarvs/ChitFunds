@@ -57,7 +57,7 @@ public class RegDoc extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(0, 0, 204));
         jButton3.setText("Upload");
 
-        jButton4.setBackground(new java.awt.Color(51, 0, 204));
+        jButton4.setBackground(new java.awt.Color(204, 0, 0));
         jButton4.setText("Cancel");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

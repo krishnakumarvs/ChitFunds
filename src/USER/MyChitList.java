@@ -48,7 +48,7 @@ public class MyChitList extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setBackground(new java.awt.Color(0, 51, 204));
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton1.setText("CANCEL");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
