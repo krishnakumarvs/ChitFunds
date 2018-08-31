@@ -1,0 +1,4 @@
+1. How to display a table in in button Click(Admin->ViewGoldLoanCust->ViewButton)
+2.Add Button In Table(Admin->ViewGoldLoanCust->viewDoc)
+3.Choose Files(User->RegDoc)
+4.popup Message(eg:Succesfully Applied)
