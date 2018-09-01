@@ -218,7 +218,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="cc" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Driving license,Driving license,Passport,PAN card"/>
+        <Property name="text" type="java.lang.String" value="Driving license,Passport,PAN card"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">

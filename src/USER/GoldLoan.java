@@ -401,8 +401,11 @@ public class GoldLoan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-GoldDetails details=new GoldDetails();
-details.setVisible(true);
+//GoldDetails details=new GoldDetails();
+//details.setVisible(true);
+        GoldLoanDocuments doc=new GoldLoanDocuments();
+        doc.setVisible(true);
+        this.dispose();
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

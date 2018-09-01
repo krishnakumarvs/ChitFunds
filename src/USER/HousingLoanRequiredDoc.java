@@ -65,7 +65,7 @@ public class HousingLoanRequiredDoc extends javax.swing.JFrame {
         jLabel2.setText("* Proof of Identification:");
 
         jLabel3.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel3.setText("Driving license,Driving license,Passport,PAN card");
+        jLabel3.setText("Driving license,Passport,PAN card");
 
         jLabel4.setForeground(new java.awt.Color(204, 0, 0));
         jLabel4.setText("Voter’s ID card,Employee ID");
