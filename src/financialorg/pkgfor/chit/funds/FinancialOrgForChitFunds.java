@@ -6,6 +6,8 @@
 
 package financialorg.pkgfor.chit.funds;
 
+import USER.LoginPage;
+
 /**
  *
  * @author USER
@@ -17,6 +19,9 @@ public class FinancialOrgForChitFunds {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        LoginPage page=new LoginPage();
+        page.setVisible(true);
+        
     }
     
 }

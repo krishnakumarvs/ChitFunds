@@ -58,7 +58,6 @@ public class VechicleLoanRequiredDoc extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 153));
         jButton1.setText("Apply");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +104,6 @@ public class VechicleLoanRequiredDoc extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         jLabel33.setText("* Bank Statements");
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 204));
         jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
