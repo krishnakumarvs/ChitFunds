@@ -155,7 +155,7 @@ public class GoldLoan extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("CANCEL");
+        jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -415,7 +415,10 @@ public class GoldLoan extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      System.exit(0);
+      GoldLoanHomePage homepage=new GoldLoanHomePage();
+      homepage.setVisible(true);
+      this.dispose();
+      
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

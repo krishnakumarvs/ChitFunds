@@ -70,7 +70,7 @@ public class DebitForm extends javax.swing.JFrame {
                     .addComponent(jTextField2))
                 .addGap(0, 129, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(121, 121, 121)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -89,17 +89,18 @@ public class DebitForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                .addGap(27, 27, 27)
                 .addComponent(jButton1)
-                .addGap(89, 89, 89))
+                .addGap(98, 98, 98))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        PaymentHistory history=new PaymentHistory();
-        history.setVisible(true);
+      Bill bill=new Bill();
+      bill.setVisible(true);
+      this.dispose();
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -98,18 +98,18 @@ public class VechicleLoanFeatures extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        vechicleloan loan=new vechicleloan();
+        VechicleLoan loan=new VechicleLoan();
         loan.setVisible(true);
+        this.dispose();
                 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-      VechicleLoanHomepage page=new VechicleLoanHomepage();
-      page.setVisible(true);
-      this.dispose();
+    VechicleloanHomePage home=new VechicleloanHomePage();
+    home.setVisible(true);
+    this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

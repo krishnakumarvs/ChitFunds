@@ -40,14 +40,8 @@ public class ViewGoldLoanCust extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"neha", "Kannur", "9526519291", "neha@gmail.com", "12/5/2018", "Ring,Bracelet", "Ring,Bangles", "2", "12,000", null},
+                {"Neha", "Kannur", "9526519291", "neha@gmail.com", "12/5/2018", "Ring,Bracelet", "Ring,Bangles", "2", "12,000", null},
                 {null, null, null, "", null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
@@ -105,8 +99,8 @@ public class ViewGoldLoanCust extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        viewGoldLoanCustomers loan=new viewGoldLoanCustomers();
-        loan.setVisible(true);
+        GoldLoanCustDoc doc=new GoldLoanCustDoc();
+        doc.setVisible(true);
         this.dispose();
 
 // TODO add your handling code here:

@@ -37,13 +37,13 @@ public class viewHousingLoanCust extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Neha", "Kozhikode", "9605448771", "40000", "neha@gmail.com", "14/8/2018", "14/8/2028", "1200000", "120000000"},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {"Neha", "Kozhikode", "9605448771", "40000", "neha@gmail.com", "14/8/2018", "14/8/2028", "1200000", "120000000", null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Address", "Mobile", "Income", "Email", "Date", "Renewaldate", "Toatal Amount", "Repayment Amount"
+                "Name", "Address", "Mobile", "Income", "Email", "Date", "Renewaldate", "Toatal Amount", "Repayment Amount", "Status"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -95,9 +95,9 @@ public class viewHousingLoanCust extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        HousingloanCustomerDetails loan=new HousingloanCustomerDetails();
-        loan.setVisible(true);
-        this.dispose();
+       HousingloanCustDoc customerdoc=new HousingloanCustDoc();
+       customerdoc.setVisible(true);
+       this.dispose();
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed

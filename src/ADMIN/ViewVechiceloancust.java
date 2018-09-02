@@ -96,9 +96,9 @@ public class ViewVechiceloancust extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        ViewVechicleCustomer view=new ViewVechicleCustomer();
-        view.setVisible(true);
-        this.dispose();
+      VechicleLoanCustDoc customerdoc=new VechicleLoanCustDoc();
+      customerdoc.setVisible(true);
+      this.dispose();
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed

@@ -68,15 +68,9 @@
         <Component class="javax.swing.JTable" name="jTable1">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="10" rowCount="9">
+              <Table columnCount="10" rowCount="3">
                 <Column editable="true" title="Name" type="java.lang.Object">
-                  <Data value="neha"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
+                  <Data value="Neha"/>
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>
@@ -84,21 +78,9 @@
                   <Data value="Kannur"/>
                   <Data value="null"/>
                   <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                 </Column>
                 <Column editable="true" title="Mobile" type="java.lang.Object">
                   <Data value="9526519291"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>
@@ -106,21 +88,9 @@
                   <Data value="neha@gmail.com"/>
                   <Data value=""/>
                   <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                 </Column>
                 <Column editable="true" title="Date" type="java.lang.Object">
                   <Data value="12/5/2018"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>
@@ -128,21 +98,9 @@
                   <Data value="Ring,Bracelet"/>
                   <Data value="null"/>
                   <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                 </Column>
                 <Column editable="true" title="Orenaments" type="java.lang.Object">
                   <Data value="Ring,Bangles"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>
@@ -150,21 +108,9 @@
                   <Data value="2"/>
                   <Data value="null"/>
                   <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                 </Column>
                 <Column editable="true" title="Amount" type="java.lang.Object">
                   <Data value="12,000"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
                   <Data value="null"/>
                   <Data value="null"/>
                 </Column>

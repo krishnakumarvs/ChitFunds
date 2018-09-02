@@ -111,16 +111,20 @@ public class HomeloanFeatures extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //HousingLoan loan=new HousingLoan();
+       //loan.setVisible(true);
         HousingLoan loan=new HousingLoan();
-       loan.setVisible(true);
+        loan.setVisible(true);
+        this.dispose();
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        HousingLoanHomepage page=new HousingLoanHomepage();
-        page.setVisible(true);
+      HousingLoanHomePage homepage=new HousingLoanHomePage();
+      homepage.setVisible(true);
+      this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

@@ -174,8 +174,8 @@ public class HousingLoanRequiredDoc extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(230, 230, 230)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
@@ -288,9 +288,9 @@ public class HousingLoanRequiredDoc extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        HousingLoanHomepage page=new HousingLoanHomepage();
-        page.setVisible(true);
-       this.dispose();
+        HousingLoanHomePage homepage=new HousingLoanHomePage();
+        homepage.setVisible(true);
+        this.dispose();
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

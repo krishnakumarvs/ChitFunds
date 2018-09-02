@@ -102,15 +102,16 @@ public class GoldLoanInterest extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        Registration reg=new Registration();
-        reg.setVisible(true);
+       GoldLoan loan=new GoldLoan();
+       loan.setVisible(true);
+       this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        GOldLoanHomepage page=new GOldLoanHomepage();
-        page.setVisible(true);
+        GoldLoanHomePage goldloan=new GoldLoanHomePage();
+        goldloan.setVisible(true);
+        this.dispose();
                 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
