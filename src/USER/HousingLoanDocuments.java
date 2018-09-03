@@ -248,7 +248,7 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton12)
                         .addGap(18, 18, 18)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton13)
                     .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
@@ -268,9 +268,9 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        HousingLoan loan=new HousingLoan();
-        loan.setVisible(true);
-        this.dispose();
+       HousingLoanIncomeDetails incomedetails=new HousingLoanIncomeDetails();
+       incomedetails.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     /**

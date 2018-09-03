@@ -74,22 +74,30 @@ public class VechicleDetails extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Vechicle Details");
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel7.setText("Cost of vechicle");
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel8.setText("Insurance Amount");
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel9.setText("Cost of Accessories");
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel10.setText("Road Tax");
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel11.setText("Other Cost");
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel12.setText("Total vechicle Cost");
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel13.setText("Loan Amount");
 
         jLabel14.setText("EMI Amount");
 
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel15.setText("Tenure");
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
@@ -115,30 +123,34 @@ public class VechicleDetails extends javax.swing.JFrame {
 
         jTextField15.setText("upload");
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
         jButton3.setText("Browse");
 
-        jButton4.setBackground(new java.awt.Color(51, 51, 51));
         jButton4.setText("Browse");
 
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel18.setText("Purpose of Loan");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select", "New Car", "Certified pre-Owned Car" }));
 
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel20.setText("Select Loan Category");
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select", "Loan for new Car", "Alreday Purchased Car" }));
 
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel21.setText("Date of purchase");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel2.setText("Car Make");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Audi", "BMW", "Ferrari", "Toyota", "Bently" }));
 
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel19.setText("car Model");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Model" }));
 
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel22.setText("Car Variant");
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Variant" }));
@@ -230,7 +242,7 @@ public class VechicleDetails extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton4)
                                 .addGap(11, 11, 11)))))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
