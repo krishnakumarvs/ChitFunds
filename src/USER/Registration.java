@@ -133,7 +133,7 @@ public class Registration extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("CANCEL");
+        jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -357,7 +357,9 @@ info.setVisible(true);
     }//GEN-LAST:event_jXDatePicker1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      System.exit(0);
+     SearchChit search=new SearchChit();
+     search.setVisible(true);
+     this.dispose();
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed

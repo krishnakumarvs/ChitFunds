@@ -71,10 +71,8 @@ public class AddChit extends javax.swing.JFrame {
 
         jLabel9.setText("Date of Commenece");
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 153));
         jButton1.setText("ADD");
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 204));
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
