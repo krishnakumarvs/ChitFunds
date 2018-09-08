@@ -1,0 +1,212 @@
+/*
+SQLyog Community v11.24 (32 bit)
+MySQL - 5.5.8 : Database - chit
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`chit` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `chit`;
+
+/*Table structure for table `auction` */
+
+DROP TABLE IF EXISTS `auction`;
+
+CREATE TABLE `auction` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `chitti_id` int(11) DEFAULT NULL,
+  `auction_started_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `auction_winner_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `auction` */
+
+/*Table structure for table `auction_apply` */
+
+DROP TABLE IF EXISTS `auction_apply`;
+
+CREATE TABLE `auction_apply` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `auction_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `user_bid_amount` float DEFAULT NULL,
+  `auction_winner_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `auction_apply` */
+
+/*Table structure for table `car_loan` */
+
+DROP TABLE IF EXISTS `car_loan`;
+
+CREATE TABLE `car_loan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `category` varchar(50) DEFAULT NULL,
+  `car_model` varchar(50) DEFAULT NULL,
+  `car_varient` varchar(50) DEFAULT NULL,
+  `car_brand` varchar(50) DEFAULT NULL,
+  `total_car_cost` float DEFAULT NULL,
+  `id_proof` blob,
+  `car_document` blob,
+  `maximum_amount` float DEFAULT NULL,
+  `status` int(11) DEFAULT '0' COMMENT '0 - applied, 1 - approved for user, 2 - user approved with amount, 3 - rejected',
+  `rejection_reason` varchar(500) DEFAULT NULL,
+  `loan_amount` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `car_loan` */
+
+/*Table structure for table `chitti_apply` */
+
+DROP TABLE IF EXISTS `chitti_apply`;
+
+CREATE TABLE `chitti_apply` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `chitti_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  `status` int(11) DEFAULT '0' COMMENT '0 - no checked , 1 - approved, 2 - rejected',
+  `nominee_name` varchar(100) DEFAULT NULL,
+  `nominee_relationship` varchar(100) DEFAULT NULL,
+  `nominee_mob_num` varchar(10) DEFAULT NULL,
+  `nominee_address` varchar(500) DEFAULT NULL,
+  `nominee_photo` blob,
+  `pending_amount` float DEFAULT NULL,
+  `amount_payed` float DEFAULT NULL,
+  `rejected_reason` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `chitti_apply` */
+
+/*Table structure for table `chittis` */
+
+DROP TABLE IF EXISTS `chittis`;
+
+CREATE TABLE `chittis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `class` varchar(1) DEFAULT NULL,
+  `frequency` varchar(20) DEFAULT NULL,
+  `no_of_installments` int(11) DEFAULT NULL,
+  `subscription_amount` float DEFAULT NULL,
+  `amount` float DEFAULT NULL,
+  `date_commence` date DEFAULT NULL,
+  `date_termination` date DEFAULT NULL,
+  `branch` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `chittis` */
+
+/*Table structure for table `gold_loan` */
+
+DROP TABLE IF EXISTS `gold_loan`;
+
+CREATE TABLE `gold_loan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `loan_amount` float DEFAULT NULL,
+  `nominee_name` varchar(100) DEFAULT NULL,
+  `nominee_relationship` varchar(20) DEFAULT NULL,
+  `nominee_mob_number` varchar(10) DEFAULT NULL,
+  `nominee_address` varchar(500) DEFAULT NULL,
+  `gold_ornaments` varchar(500) DEFAULT NULL,
+  `total_weight` float DEFAULT NULL,
+  `maximum_amount` float DEFAULT NULL,
+  `status` int(11) DEFAULT NULL COMMENT '0 - applied, 1 - approved for user, 2 - user approved with amount, 3 - rejected',
+  `rejected_reason` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `gold_loan` */
+
+/*Table structure for table `house_loan` */
+
+DROP TABLE IF EXISTS `house_loan`;
+
+CREATE TABLE `house_loan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `employment_type` varchar(50) DEFAULT NULL,
+  `designation` varchar(100) DEFAULT NULL,
+  `employer_name` varchar(100) DEFAULT NULL,
+  `department` varchar(100) DEFAULT NULL,
+  `retirement_age` int(11) DEFAULT NULL,
+  `official_email` varchar(100) DEFAULT NULL,
+  `company_name` varchar(100) DEFAULT NULL,
+  `company_phone_num` varchar(15) DEFAULT NULL,
+  `company_address` varchar(500) DEFAULT NULL,
+  `company_pincode` varchar(10) DEFAULT NULL,
+  `company_state` varchar(100) DEFAULT NULL,
+  `company_country` varchar(100) DEFAULT NULL,
+  `salary_amount` float DEFAULT NULL,
+  `salary_doc` blob,
+  `self_employeed-doc` blob,
+  `registration_certificate` blob,
+  `proof_of_investment` blob,
+  `amount` float DEFAULT NULL,
+  `loan_status` int(11) DEFAULT '0' COMMENT '0 - applied, 1 - approved for user, 2 - user approved with amount, 3 - rejected',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `house_loan` */
+
+/*Table structure for table `payments` */
+
+DROP TABLE IF EXISTS `payments`;
+
+CREATE TABLE `payments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `loan_type` varchar(20) DEFAULT NULL COMMENT 'house, car, gold, chitti',
+  `amount` float DEFAULT NULL,
+  `payment_type` varchar(20) DEFAULT NULL COMMENT 'debit,credit',
+  `created_date` date DEFAULT NULL,
+  `loan_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `payments` */
+
+/*Table structure for table `user_details` */
+
+DROP TABLE IF EXISTS `user_details`;
+
+CREATE TABLE `user_details` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `mob_num` varchar(10) DEFAULT NULL,
+  `email_id` varchar(100) DEFAULT NULL,
+  `user_name` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `present_address` varchar(500) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `occupation` varchar(200) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `permanent_address` varchar(500) DEFAULT NULL,
+  `district` varchar(100) DEFAULT NULL,
+  `pincode` varchar(10) DEFAULT NULL,
+  `land_number` varchar(15) DEFAULT NULL,
+  `annual_income` float DEFAULT NULL,
+  `father_name` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `user_details` */
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
