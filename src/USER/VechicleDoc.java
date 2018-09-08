@@ -56,7 +56,6 @@ public class VechicleDoc extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         jLabel1.setText("Identification Proof");
 
-        jButton1.setBackground(new java.awt.Color(0, 51, 204));
         jButton1.setText("Browse");
 
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N

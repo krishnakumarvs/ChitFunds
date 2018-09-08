@@ -83,7 +83,7 @@ public class HousingLoanEligibility extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("*The age of applicant must be between 21 years and 70 years");
+        jLabel5.setText("*The age of applicant must be between 21 years and 50 years");
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
