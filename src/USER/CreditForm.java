@@ -17,6 +17,7 @@ public class CreditForm extends javax.swing.JFrame {
      */
     public CreditForm() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

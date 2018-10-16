@@ -17,6 +17,7 @@ public class VechicleLoanPayment extends javax.swing.JFrame {
      */
     public VechicleLoanPayment() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

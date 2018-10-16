@@ -6,6 +6,7 @@
 
 package financialorg.pkgfor.chit.funds;
 
+import USER.FirstPage;
 import USER.LoginPage;
 
 /**
@@ -19,7 +20,7 @@ public class FinancialOrgForChitFunds {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        LoginPage page=new LoginPage();
+        FirstPage page=new FirstPage();
         page.setVisible(true);
         
     }

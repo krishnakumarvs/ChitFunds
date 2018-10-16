@@ -17,6 +17,7 @@ public class HousingDocContinue extends javax.swing.JFrame {
      */
     public HousingDocContinue() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

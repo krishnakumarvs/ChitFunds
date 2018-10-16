@@ -13,10 +13,11 @@ package USER;
 public class Chitpayment extends javax.swing.JFrame {
 
     /**
-     * Creates new form Chitpayment
+     * Creates new form ChitPayment
      */
     public Chitpayment() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

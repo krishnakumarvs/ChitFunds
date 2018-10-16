@@ -17,6 +17,7 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
      */
     public HousingLoanDocuments() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**
@@ -61,6 +62,7 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -148,6 +150,13 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
 
         jButton13.setText("Browes");
 
+        jButton14.setText("Home");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -206,7 +215,9 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
                 .addComponent(jButton5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton8)
-                .addGap(62, 62, 62))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton14)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,7 +265,8 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
-                    .addComponent(jButton5))
+                    .addComponent(jButton5)
+                    .addComponent(jButton14))
                 .addGap(15, 15, 15))
         );
 
@@ -267,11 +279,17 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-       HousingLoanIncomeDetails incomedetails=new HousingLoanIncomeDetails();
-       incomedetails.setVisible(true);
+       HousingLoan housingloan=new HousingLoan();
+       housingloan.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        HousingLoanHomePage homepage=new HousingLoanHomePage();
+        homepage.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,6 +332,7 @@ public class HousingLoanDocuments extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

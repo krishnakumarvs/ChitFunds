@@ -17,6 +17,7 @@ public class AccountVerificationStatus extends javax.swing.JFrame {
      */
     public AccountVerificationStatus() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

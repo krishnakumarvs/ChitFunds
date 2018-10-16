@@ -17,6 +17,7 @@ public class PaymentHistory extends javax.swing.JFrame {
      */
     public PaymentHistory() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**
@@ -40,13 +41,13 @@ public class PaymentHistory extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "Chit", "ABY4586", "25000", "29000", "400", "15/6/2018", "12.04"},
-                {"2", "HousingLoan", "Hou458", "45000", "57000", "12000", "14/8/2016", "10.0"},
+                {"1", "Chit", "ABY4586", "25000", "400", "29000", "15/6/2018", "12.04"},
+                {"2", "HousingLoan", "Hou458", "45000", "10000", "46000", "14/8/2016", "10.0"},
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Sl.No", "Type", "Transaction Id", "Repayment Amount", "Total Amount", "Interest Amiount", "Date", "Tme"
+                "Sl.No", "Type", "Transaction Id", "Repayment Amount", "interest/Fine", "Total", "Date", "Tme"
             }
         ));
         jTable1.setToolTipText("");
@@ -68,7 +69,7 @@ public class PaymentHistory extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 737, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

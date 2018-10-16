@@ -17,6 +17,7 @@ public class DebitForm extends javax.swing.JFrame {
      */
     public DebitForm() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

@@ -17,6 +17,7 @@ public class HousingLoanRequiredDoc extends javax.swing.JFrame {
      */
     public HousingLoanRequiredDoc() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

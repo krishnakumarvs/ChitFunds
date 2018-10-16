@@ -17,6 +17,7 @@ public class GOldLoanPayment extends javax.swing.JFrame {
      */
     public GOldLoanPayment() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

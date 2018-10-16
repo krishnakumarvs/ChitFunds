@@ -17,6 +17,7 @@ public class Bill extends javax.swing.JFrame {
      */
     public Bill() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

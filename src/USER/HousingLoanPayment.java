@@ -17,6 +17,7 @@ public class HousingLoanPayment extends javax.swing.JFrame {
      */
     public HousingLoanPayment() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**

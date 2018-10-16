@@ -163,8 +163,8 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        signupReg reg=new signupReg();
-        reg.setVisible(true);
+        Registration registration=new Registration();
+        registration.setVisible(true);
         this.dispose();
 
 // TODO add your handling code here:

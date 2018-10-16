@@ -17,6 +17,7 @@ public class SearchChit extends javax.swing.JFrame {
      */
     public SearchChit() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**
