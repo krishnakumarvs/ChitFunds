@@ -83,7 +83,7 @@ public class MyChitList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        userHomepage homepage=new userHomepage();
+        UserHomepage homepage=new UserHomepage();
         homepage.setVisible(true);
         this.dispose();
         

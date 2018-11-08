@@ -93,7 +93,7 @@ public class PaymentHistory extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        userHomepage home=new userHomepage();
+        UserHomepage home=new UserHomepage();
         home.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -112,9 +112,9 @@ public class HousingLoanHomePage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(55, 55, 55)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
+                .addGap(42, 42, 42)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(195, Short.MAX_VALUE))
         );
@@ -133,7 +133,7 @@ public class HousingLoanHomePage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       userHomepage userhome=new userHomepage();
+       UserHomepage userhome=new UserHomepage();
        userhome.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

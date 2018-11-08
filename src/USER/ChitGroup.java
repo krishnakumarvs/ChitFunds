@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package USER;
+
+import db.Dbcon;
+import java.sql.ResultSet;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,7 +20,60 @@ public class ChitGroup extends javax.swing.JFrame {
      */
     public ChitGroup() {
         initComponents();
-          this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
+        //serachChits("");
+    }
+
+    public ChitGroup(String chittiName, String frequencyString, float subscriptionAmount, int noOfInstallment, float chitValue) {
+        initComponents();
+        this.setLocationRelativeTo(null);
+        serachChits(chittiName, frequencyString, subscriptionAmount, noOfInstallment, chitValue);
+    }
+
+    private void serachChits(String chittiName, String frequencyString, float subscriptionAmount, int noOfInstallment, float chitValue) {
+        try {
+            String query = "select * from chittis where name like '%" + chittiName + "%' ";
+
+            if (!frequencyString.trim().equals("")) {
+                query = query + " and frequency = '" + frequencyString + "' ";
+            }
+
+            if (subscriptionAmount >= 0) {
+                query = query + " and subscription_amount=" + subscriptionAmount + " ";
+            }
+
+            if (noOfInstallment >= 0) {
+                query = query + " and no_of_installments=" + noOfInstallment + " ";
+            }
+
+            if (chitValue >= 0) {
+                query = query + " and amount=" + chitValue + " ";
+            }
+
+            System.out.println("query " + query);
+
+            ResultSet rs = new Dbcon().select(query);
+            DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+            while (rs.next()) {
+                String name = rs.getString("name");
+                String className = rs.getString("class");
+                String frequency = rs.getString("frequency");
+                String no_of_installments = rs.getString("no_of_installments");
+                String subscription_amount = rs.getString("subscription_amount");
+                String amount = rs.getString("amount");
+                String date_commence = rs.getString("date_commence");
+                String date_termination = rs.getString("date_termination");
+                String auction_date = rs.getString("auction_date");
+                String id = rs.getString("id");
+
+                String[] row = new String[]{name, className, frequency, no_of_installments, subscription_amount, amount, id};
+                model.addRow(row);
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -54,16 +110,21 @@ public class ChitGroup extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Onam", "Kaloor", "A", "Monthly", "45", "5000", "500000"},
-                {"Regular", "lissi", "B", "Weekly", "30", "4000", "100000"},
-                {"Onam", "lissy", "A", "Monthly", "40", "10000", "100000"},
-                {"Regular", null, null, null, null, null, null}
+
             },
             new String [] {
-                "Chit Name", "Branch", "Class", "Frequency", "No.of Installment", "subscription amount", "Chit Value"
+                "Chit Name", "Class", "Frequency", "No.of Installment", "Subscription amount", "Chit Value", "id"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(1).setMinWidth(50);
+            jTable2.getColumnModel().getColumn(1).setPreferredWidth(50);
+            jTable2.getColumnModel().getColumn(1).setMaxWidth(50);
+            jTable2.getColumnModel().getColumn(6).setMinWidth(0);
+            jTable2.getColumnModel().getColumn(6).setPreferredWidth(0);
+            jTable2.getColumnModel().getColumn(6).setMaxWidth(0);
+        }
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton2.setText("View");
@@ -92,54 +153,51 @@ public class ChitGroup extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addGap(127, 127, 127))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 723, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1)
+                        .addGap(14, 14, 14)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jButton2))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 157, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)
+                    .addComponent(jButton1))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      ViewChitFunds chitfunds=new ViewChitFunds();
-      chitfunds.setVisible(true);
-      this.dispose();
-        
+        ViewChitFunds chitfunds = new ViewChitFunds();
+        chitfunds.setVisible(true);
+        this.dispose();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       SearchChit chit=new SearchChit();
-       chit.setVisible(true);
-       this.dispose();
+        SearchChit chit = new SearchChit();
+        chit.setVisible(true);
+        this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        userHomepage homepage=new userHomepage();
+        UserHomepage homepage = new UserHomepage();
         homepage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package USER;
 
 /**
@@ -17,7 +16,7 @@ public class SearchChit extends javax.swing.JFrame {
      */
     public SearchChit() {
         initComponents();
-          this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -33,15 +32,15 @@ public class SearchChit extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jXDatePicker1 = new org.jdesktop.swingx.JXDatePicker();
+        jSpinner1 = new javax.swing.JSpinner();
+        jTextField4 = new javax.swing.JSpinner();
+        jSpinner2 = new javax.swing.JSpinner();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,8 +53,6 @@ public class SearchChit extends javax.swing.JFrame {
         jLabel6.setText("Subscription Amount");
 
         jLabel7.setText("Chit Value");
-
-        jLabel8.setText("Commencement");
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
         jButton1.setText("Show");
@@ -73,70 +70,82 @@ public class SearchChit extends javax.swing.JFrame {
             }
         });
 
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel());
+
+        jTextField4.setModel(new javax.swing.SpinnerNumberModel());
+
+        jSpinner2.setModel(new javax.swing.SpinnerNumberModel());
+
+        jLabel1.setText("Name");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel8))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel5))
+                                    .addComponent(jLabel7))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jSpinner1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                                    .addComponent(jSpinner2)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField4)
-                                    .addComponent(jXDatePicker1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel7)))))
-                .addGap(51, 51, 51))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField1)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(36, 36, 36))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)))
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel8))
-                    .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel4)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jXDatePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(57, 57, 57)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel7)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))))
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -148,17 +157,40 @@ public class SearchChit extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        ChitGroup chit=new ChitGroup();
+        String frequency = jComboBox1.getSelectedItem().toString();
+        float subsricptionAmount = 0;
+        if (jTextField4.getValue() != null) {
+            subsricptionAmount = Float.parseFloat(jTextField4.getValue().toString());
+        }
+        String chitName = jTextField1.getText();
+
+        float chitValue = 0;
+        if (jSpinner2.getValue() != null) {
+            chitValue = Float.parseFloat(jSpinner2.getValue().toString());
+        }
+
+        int noOfInstallment = -1;
+        if (jSpinner1.getValue() != null) {
+            noOfInstallment = Integer.parseInt(jSpinner1.getValue().toString().trim());
+        }
+
+        subsricptionAmount = (subsricptionAmount == 0) ? -1 : subsricptionAmount;
+        chitValue = (chitValue == 0) ? -1 : chitValue;
+        noOfInstallment = (noOfInstallment == 0) ? -1 : noOfInstallment;
+
+        ChitGroup chit;
+        chit = new ChitGroup(chitName, frequency, subsricptionAmount, noOfInstallment, chitValue);
         chit.setVisible(true);
+        dispose();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      userHomepage page=new userHomepage();
-      page.setVisible(true);
-       this.dispose();
-      
-        
+        UserHomepage page = new UserHomepage();
+        page.setVisible(true);
+        this.dispose();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -201,15 +233,15 @@ public class SearchChit extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private org.jdesktop.swingx.JXDatePicker jXDatePicker1;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JSpinner jTextField4;
     // End of variables declaration//GEN-END:variables
 }

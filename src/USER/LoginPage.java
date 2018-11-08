@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package USER;
 
 import db.Dbcon;
@@ -37,15 +36,17 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         username_txtfild = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        password_txtfild = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        password_txtfild = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel1.setText("User Name");
+
+        username_txtfild.setText("ramu");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel2.setText("Password");
@@ -73,28 +74,32 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
+        password_txtfild.setText("123");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(password_txtfild, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(username_txtfild))
-                .addContainerGap(92, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                .addComponent(jLabel3)
                 .addGap(126, 126, 126))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(65, 65, 65)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(username_txtfild, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                            .addComponent(password_txtfild))))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,53 +125,46 @@ public class LoginPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+
 //       userHomepage page=new userHomepage();
 //       page.setVisible(true);
 //       this.dispose();
-
-        String username,password;
-        username=username_txtfild.getText();
-        password=password_txtfild.getText();
+        String username, password;
+        username = username_txtfild.getText();
+        password = password_txtfild.getText();
         //System.out.println(username);
-         
-         String query="select * from user where name='"+username+"' and password='"+password+"'";
-         System.out.println(query);
-         Dbcon dbcon=new Dbcon();
-         ResultSet rs=dbcon.select(query);
-         try
-         {
-            if(rs.next())
-            {
-                userHomepage page=new userHomepage();
+
+        String query = "select * from user_details where name='" + username + "' and password='" + password + "'";
+        System.out.println(query);
+        Dbcon dbcon = new Dbcon();
+        ResultSet rs = dbcon.select(query);
+        try {
+            if (rs.next()) {
+                UserHomepage page = new UserHomepage();
                 page.setVisible(true);
                 this.dispose();
-            }
-            else
-            {
+            } else {
                 //System.out.println("invalid");
                 JOptionPane.showMessageDialog(rootPane, "Invalid Username and password");
             }
-         }
-         catch(Exception e)
-         {
-             System.out.println(e);
-         }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-       // ForgotPassword pwd= new ForgotPassword();
+        // ForgotPassword pwd= new ForgotPassword();
         //pwd.setVisible(true);
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Registration registration=new Registration();
+        
+        Registration registration = new Registration();
         registration.setVisible(true);
         this.dispose();
-
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -211,7 +209,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField password_txtfild;
+    private javax.swing.JPasswordField password_txtfild;
     private javax.swing.JTextField username_txtfild;
     // End of variables declaration//GEN-END:variables
 }

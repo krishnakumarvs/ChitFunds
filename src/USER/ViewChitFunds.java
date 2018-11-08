@@ -272,7 +272,7 @@ public class ViewChitFunds extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        userHomepage homepage=new userHomepage();
+        UserHomepage homepage=new UserHomepage();
         homepage.setVisible(true);
         this.dispose();
         // TODO add your handling code here:

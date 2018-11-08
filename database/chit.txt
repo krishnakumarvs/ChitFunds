@@ -102,13 +102,15 @@ CREATE TABLE `chittis` (
   `no_of_installments` int(11) DEFAULT NULL,
   `subscription_amount` float DEFAULT NULL,
   `amount` float DEFAULT NULL,
-  `date_commence` date DEFAULT NULL,
-  `date_termination` date DEFAULT NULL,
-  `branch` varchar(100) DEFAULT NULL,
+  `date_commence` varchar(100) DEFAULT NULL,
+  `date_termination` varchar(100) DEFAULT NULL,
+  `auction_date` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `chittis` */
+
+insert  into `chittis`(`id`,`name`,`class`,`frequency`,`no_of_installments`,`subscription_amount`,`amount`,`date_commence`,`date_termination`,`auction_date`) values (1,'Soubagya kuti','A','Monthly',3,432,234,'1541010600000','1542738600000','1542738600000'),(2,'asdasd','B','Weekly',2,23,234,'1541269800000','1542825000000','1543516200000'),(3,'dd','A','Monthly',4,23,432342,'1541961000000','1541356200000','1541097000000');
 
 /*Table structure for table `gold_loan` */
 
@@ -192,7 +194,7 @@ CREATE TABLE `user_details` (
   `user_name` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `present_address` varchar(500) DEFAULT NULL,
-  `dob` date DEFAULT NULL,
+  `dob` varchar(100) DEFAULT NULL,
   `city` varchar(100) DEFAULT NULL,
   `occupation` varchar(200) DEFAULT NULL,
   `gender` varchar(10) DEFAULT NULL,
@@ -202,10 +204,15 @@ CREATE TABLE `user_details` (
   `land_number` varchar(15) DEFAULT NULL,
   `annual_income` float DEFAULT NULL,
   `father_name` varchar(100) DEFAULT NULL,
+  `state` varchar(100) DEFAULT NULL,
+  `marriatal_status` varchar(20) DEFAULT NULL,
+  `employer_details` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `user_details` */
+
+insert  into `user_details`(`id`,`name`,`mob_num`,`email_id`,`user_name`,`password`,`present_address`,`dob`,`city`,`occupation`,`gender`,`permanent_address`,`district`,`pincode`,`land_number`,`annual_income`,`father_name`,`state`,`marriatal_status`,`employer_details`) values (1,'ramu','34543534','dfsdf','ramu','123','sdfsd','1541442600000',NULL,'Salaried','male','sdf','dsfsdf','345345',NULL,2,NULL,'Assam','married','sdfsdfsddsf');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

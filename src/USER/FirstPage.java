@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package USER;
+
+import ADMIN.AdminLogin;
 
 /**
  *
@@ -17,7 +18,7 @@ public class FirstPage extends javax.swing.JFrame {
      */
     public FirstPage() {
         initComponents();
-          this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -73,13 +74,16 @@ public class FirstPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
+
+        new AdminLogin().setVisible(true);
+        this.dispose();
+// TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        LoginPage login=new LoginPage();
+        LoginPage login = new LoginPage();
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed

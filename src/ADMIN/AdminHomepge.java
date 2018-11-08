@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package ADMIN;
 
 import USER.VechicleDetails;
@@ -19,6 +18,7 @@ public class AdminHomepge extends javax.swing.JFrame {
      */
     public AdminHomepge() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -265,29 +265,29 @@ public class AdminHomepge extends javax.swing.JFrame {
 
     private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
        //Auction auction=new Auction();
-       //auction.setVisible(true);
-       //this.dispose();
+        //auction.setVisible(true);
+        //this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenu3ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-       
-        ChitDueCustomers due=new ChitDueCustomers();
+
+        ChitDueCustomers due = new ChitDueCustomers();
         due.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-       // HousingloanCustomerDetails loandue=new HousingloanCustomerDetails();
-        DueHousingLoan loandue=new DueHousingLoan();
+        // HousingloanCustomerDetails loandue=new HousingloanCustomerDetails();
+        DueHousingLoan loandue = new DueHousingLoan();
         loandue.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-        DueGoldLoanCustomers duegold=new DueGoldLoanCustomers();
+        DueGoldLoanCustomers duegold = new DueGoldLoanCustomers();
         duegold.setVisible(true);
         this.dispose();
 
@@ -295,8 +295,8 @@ public class AdminHomepge extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
-       
-        DueVechicleLoan duevechicle=new DueVechicleLoan();
+
+        DueVechicleLoan duevechicle = new DueVechicleLoan();
         duevechicle.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
@@ -304,88 +304,88 @@ public class AdminHomepge extends javax.swing.JFrame {
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
       // Auction auction=new Auction();
-      // auction.setVisible(true);
-      // this.dispose();
-        
+        // auction.setVisible(true);
+        // this.dispose();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
-          GoldLoanApprove loanapprove=new GoldLoanApprove();
+        GoldLoanApprove loanapprove = new GoldLoanApprove();
         loanapprove.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenuItem4KeyPressed
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_jMenuItem4KeyPressed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
         // TODO add your handling code here:
-         ChitApprovel approvelchit=new ChitApprovel();
+        ChitApprovel approvelchit = new ChitApprovel();
         approvelchit.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem18ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
-        HousingLoanApprove approve=new HousingLoanApprove();
+        HousingLoanApprove approve = new HousingLoanApprove();
         approve.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        CarLoanApprove approve=new CarLoanApprove();
+        CarLoanApprove approve = new CarLoanApprove();
         approve.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
         // TODO add your handling code here:
-        AddChit addchit=new AddChit();
+        AddChit addchit = new AddChit();
         addchit.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem21ActionPerformed
 
     private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
         // TODO add your handling code here:
-        TodaysAuction toadaysauction=new TodaysAuction();
-       toadaysauction.setVisible(true);
-       this.dispose();
+        TodaysAuction toadaysauction = new TodaysAuction();
+        toadaysauction.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMenuItem30ActionPerformed
 
     private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
         // TODO add your handling code here:
-        AuctionDetails auctiondetails=new AuctionDetails();
+        AuctionDetails auctiondetails = new AuctionDetails();
         auctiondetails.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem27ActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
         // TODO add your handling code here:
-       Auction auction=new Auction();
-       auction.setVisible(true);
-       this.dispose();
+        Auction auction = new Auction();
+        auction.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMenuItem29ActionPerformed
 
     private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
         // TODO add your handling code here:
-        GoldRate rate=new GoldRate();
+        GoldRate rate = new GoldRate();
         rate.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-       // ViewAllCustomers customers=new ViewAllCustomers();
+        // ViewAllCustomers customers=new ViewAllCustomers();
         //customers.setVisible(true);
         //this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
