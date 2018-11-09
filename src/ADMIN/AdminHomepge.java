@@ -385,9 +385,9 @@ public class AdminHomepge extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        // ViewAllCustomers customers=new ViewAllCustomers();
-        //customers.setVisible(true);
-        //this.dispose();
+//         ViewAllCustomers customers=new ViewAllCustomers();
+//        customers.setVisible(true);
+//        this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**

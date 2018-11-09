@@ -15,11 +15,13 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ChitGroup extends javax.swing.JFrame {
 
+    int  selectedId;
     /**
      * Creates new form ChitGroup
      */
     public ChitGroup() {
         initComponents();
+        jButton2.setEnabled(false);
         this.setLocationRelativeTo(null);
         //serachChits("");
     }
@@ -27,6 +29,7 @@ public class ChitGroup extends javax.swing.JFrame {
     public ChitGroup(String chittiName, String frequencyString, float subscriptionAmount, int noOfInstallment, float chitValue) {
         initComponents();
         this.setLocationRelativeTo(null);
+        jButton2.setEnabled(false);
         serachChits(chittiName, frequencyString, subscriptionAmount, noOfInstallment, chitValue);
     }
 
@@ -116,6 +119,11 @@ public class ChitGroup extends javax.swing.JFrame {
                 "Chit Name", "Class", "Frequency", "No.of Installment", "Subscription amount", "Chit Value", "id"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {
             jTable2.getColumnModel().getColumn(1).setMinWidth(50);
@@ -170,10 +178,11 @@ public class ChitGroup extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3)
-                    .addComponent(jButton1))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton2)
+                        .addComponent(jButton1)))
                 .addContainerGap())
         );
 
@@ -181,7 +190,7 @@ public class ChitGroup extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ViewChitFunds chitfunds = new ViewChitFunds();
+        ViewChitFunds chitfunds = new ViewChitFunds(selectedId);
         chitfunds.setVisible(true);
         this.dispose();
 
@@ -201,6 +210,14 @@ public class ChitGroup extends javax.swing.JFrame {
         homepage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+        int row = jTable2.getSelectedRow();
+        selectedId = Integer.parseInt(jTable2.getModel().getValueAt(row, 6).toString());
+        jButton2.setEnabled(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
 
     /**
      * @param args the command line arguments
