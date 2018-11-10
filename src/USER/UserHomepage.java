@@ -400,6 +400,7 @@ public class UserHomepage extends javax.swing.JFrame {
 
         MyChitList list=new MyChitList();
         list.setVisible(true);
+        this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
 

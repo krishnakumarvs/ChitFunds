@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package USER;
+
+import db.Dbcon;
+import java.sql.ResultSet;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,7 +20,38 @@ public class MyChitList extends javax.swing.JFrame {
      */
     public MyChitList() {
         initComponents();
-          this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
+        loadAllChits();
+    }
+
+    private void loadAllChits() {
+        try {
+            ResultSet rs = new Dbcon().select("select * from chitti_apply where user_id = " + UserHomepage.userId);
+
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            int count = 0;
+            while (rs.next()) {
+                count++;
+                String chit_name = rs.getString("chit_name");
+                String chitti_id = rs.getString("chitti_id");
+                String created_at = rs.getString("created_at");
+                String status = rs.getString("status");
+                String pending_amount = rs.getString("pending_amount");
+                String amount_payed = rs.getString("amount_payed");
+                String rejected_reason = rs.getString("rejected_reason");
+                String actual_amount = rs.getString("actual_amount");
+                String each_installation_amount = rs.getString("each_installation_amount");
+                String classNa = rs.getString("class");
+                String frequency = rs.getString("frequency");
+                String no_installments = rs.getString("no_installments");
+
+                String row [] = new String[] {count+"" , chitti_id , actual_amount, classNa, frequency, no_installments, each_installation_amount, pending_amount};
+                model.addRow(row);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -37,19 +71,16 @@ public class MyChitList extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "KYC1", "Kaloor", "50000", "B", "Monthly", "45", "5000", "10000"},
-                {"2", "KYC2", "KAloor", null, "A", "Monthly", "50", "10000", "-"},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "Sl.No", "Chit No", "Branch ", "Chit Value", "Class", "Frequency", "No.Of Intallment", "Sub.Amt", "Due Amount"
+                "Sl.No", "Chit No", "Chit Value", "Class", "Frequency", "No.Of Intallment", "Each instalment", "Due Amount"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jButton1.setText("CANCEL");
+        jButton1.setText("Go Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -61,37 +92,38 @@ public class MyChitList extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(136, 136, 136))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(105, 105, 105))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(6, 6, 6))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        UserHomepage homepage=new UserHomepage();
+        UserHomepage homepage = new UserHomepage();
         homepage.setVisible(true);
         this.dispose();
-        
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * z
+     *
      * @param args the command line arguments
      */
     public static void main(String args[]) {
