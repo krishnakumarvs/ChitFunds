@@ -12,6 +12,7 @@ package USER;
  */
 public class UserHomepage extends javax.swing.JFrame {
 
+    static String userId;
     /**
      * Creates new form userHomepage
      */
@@ -285,6 +286,11 @@ public class UserHomepage extends javax.swing.JFrame {
         jMenuBar2.add(jMenu2);
 
         jMenu6.setText("LOGOUT");
+        jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu6MouseClicked(evt);
+            }
+        });
         jMenu6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu6ActionPerformed(evt);
@@ -386,6 +392,7 @@ public class UserHomepage extends javax.swing.JFrame {
 
         MyProfile profile =new MyProfile();
         profile.setVisible(true);
+        this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jLabel2MouseClicked
 
@@ -448,6 +455,10 @@ public class UserHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jMenu6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu6ActionPerformed
+
+        LoginPage login = new LoginPage();
+        login.setVisible(true);
+        this.dispose();
         // TODO add your handling code here:
        
     }//GEN-LAST:event_jMenu6ActionPerformed
@@ -472,6 +483,14 @@ public class UserHomepage extends javax.swing.JFrame {
         status.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem30ActionPerformed
+
+    private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
+
+        LoginPage login = new LoginPage();
+        login.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu6MouseClicked
 
     /**
      * @param args the command line arguments

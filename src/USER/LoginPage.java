@@ -140,6 +140,7 @@ public class LoginPage extends javax.swing.JFrame {
         ResultSet rs = dbcon.select(query);
         try {
             if (rs.next()) {
+                UserHomepage.userId = rs.getString("id");
                 UserHomepage page = new UserHomepage();
                 page.setVisible(true);
                 this.dispose();
