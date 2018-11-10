@@ -7,6 +7,7 @@ package USER;
 
 import db.Dbcon;
 import java.sql.ResultSet;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -229,13 +230,14 @@ public class HousingLoan extends javax.swing.JFrame {
         String nominee_relaString = jComboBox1.getSelectedItem().toString();
         
         String query = "insert into house_loan (user_id, nominee_name,nominee_age,nominee_relation,nominee_email,"
-                + "nominee_mobile,nominee_address) values ("
+                + "nominee_mobile,created_at, nominee_address) values ("
                 + " '" + UserHomepage.userId + "', "
                 + " '" + nominee_name + "', "
                 + " '" + nominee_age + "', "
                 + " '" + nominee_relaString + "', "
                 + " '" + nominee_email + "', "
                 + " '" + nominee_mobile + "', "
+                + " '" + new Date().getTime() + "', "
                 + " '" + nominee_address + "' "
                 + ""
                 + ")";
