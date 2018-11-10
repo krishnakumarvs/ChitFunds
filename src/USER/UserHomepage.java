@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package USER;
 
 /**
@@ -13,12 +12,13 @@ package USER;
 public class UserHomepage extends javax.swing.JFrame {
 
     static String userId;
+
     /**
      * Creates new form userHomepage
      */
     public UserHomepage() {
         initComponents();
-          this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -58,6 +58,7 @@ public class UserHomepage extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -162,6 +163,14 @@ public class UserHomepage extends javax.swing.JFrame {
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
+            }
+        });
+
+        jLabel4.setText("My Pending Approval");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
             }
         });
 
@@ -310,7 +319,7 @@ public class UserHomepage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(447, Short.MAX_VALUE)
+                .addContainerGap(454, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(135, 135, 135))
             .addGroup(layout.createSequentialGroup()
@@ -323,7 +332,8 @@ public class UserHomepage extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -336,10 +346,12 @@ public class UserHomepage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
         );
 
         pack();
@@ -347,50 +359,49 @@ public class UserHomepage extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
 
-   SearchChit chit=new SearchChit();
-   chit.setVisible(true);
-   this.dispose();
-       /* Registration reg=new Registration();
-        reg.setVisible(true);*/
+        SearchChit chit = new SearchChit();
+        chit.setVisible(true);
+        this.dispose();
+        /* Registration reg=new Registration();
+         reg.setVisible(true);*/
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-       GoldLoanHomePage homepage=new GoldLoanHomePage();
-       homepage.setVisible(true);
-       this.dispose();
-        
+        GoldLoanHomePage homepage = new GoldLoanHomePage();
+        homepage.setVisible(true);
+        this.dispose();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-       VechicleloanHomePage homepage=new VechicleloanHomePage();
-       homepage.setVisible(true);
-       this.dispose();
+        VechicleloanHomePage homepage = new VechicleloanHomePage();
+        homepage.setVisible(true);
+        this.dispose();
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-      HousingLoanHomePage homepage=new HousingLoanHomePage();
-      homepage.setVisible(true);
-      this.dispose();
-        
-        
+        HousingLoanHomePage homepage = new HousingLoanHomePage();
+        homepage.setVisible(true);
+        this.dispose();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-      SearchChit chit=new SearchChit();
-      chit.setVisible(true);
-      this.dispose();
+        SearchChit chit = new SearchChit();
+        chit.setVisible(true);
+        this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
 
-        MyProfile profile =new MyProfile();
+        MyProfile profile = new MyProfile();
         profile.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
@@ -398,51 +409,50 @@ public class UserHomepage extends javax.swing.JFrame {
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
 
-        MyChitList list=new MyChitList();
+        MyChitList list = new MyChitList();
         list.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-       
-        Auction auction=new Auction();
+
+        Auction auction = new Auction();
         auction.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jMenu1MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu1MenuSelected
-       
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenu1MenuSelected
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-      Chitpayment payment=new Chitpayment();
-      payment.setVisible(true);
-      this.dispose();
+        Chitpayment payment = new Chitpayment();
+        payment.setVisible(true);
+        this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        HousingLoanPayment payment=new HousingLoanPayment();
+        HousingLoanPayment payment = new HousingLoanPayment();
         payment.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-      VechicleLoanPayment payment=new VechicleLoanPayment();
-      payment.setVisible(true);
-      this.dispose();
-        
+        VechicleLoanPayment payment = new VechicleLoanPayment();
+        payment.setVisible(true);
+        this.dispose();
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-       
-        GOldLoanPayment pay=new GOldLoanPayment();
+
+        GOldLoanPayment pay = new GOldLoanPayment();
         pay.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
@@ -450,7 +460,7 @@ public class UserHomepage extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-        PaymentHistory history=new PaymentHistory();
+        PaymentHistory history = new PaymentHistory();
         history.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
@@ -461,26 +471,26 @@ public class UserHomepage extends javax.swing.JFrame {
         login.setVisible(true);
         this.dispose();
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_jMenu6ActionPerformed
 
     private void jMenu6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenu6KeyPressed
         // TODO add your handling code here:
-         LoginPage login=new LoginPage();
-         login.setVisible(true);
-         this.dispose();
+        LoginPage login = new LoginPage();
+        login.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMenu6KeyPressed
 
     private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
         // TODO add your handling code here:
-        AccountVerificationStatus status=new AccountVerificationStatus();
+        AccountVerificationStatus status = new AccountVerificationStatus();
         status.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
     private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
         // TODO add your handling code here:
-        LoanStatus status=new LoanStatus();
+        LoanStatus status = new LoanStatus();
         status.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem30ActionPerformed
@@ -492,6 +502,13 @@ public class UserHomepage extends javax.swing.JFrame {
         this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu6MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+
+        new ChitListStatus().setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -533,6 +550,7 @@ public class UserHomepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;

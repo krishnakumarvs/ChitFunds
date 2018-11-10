@@ -13,12 +13,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author USER
  */
-public class MyChitList extends javax.swing.JFrame {
+public class ChitListStatus extends javax.swing.JFrame {
 
     /**
      * Creates new form MyChitList
      */
-    public MyChitList() {
+    public ChitListStatus() {
         initComponents();
         this.setLocationRelativeTo(null);
         loadAllChits();
@@ -26,7 +26,7 @@ public class MyChitList extends javax.swing.JFrame {
 
     private void loadAllChits() {
         try {
-            ResultSet rs = new Dbcon().select("select * from chitti_apply where status=1 and user_id = " + UserHomepage.userId);
+            ResultSet rs = new Dbcon().select("select * from chitti_apply where status!=1 and user_id = " + UserHomepage.userId);
 
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             int count = 0;
@@ -44,8 +44,10 @@ public class MyChitList extends javax.swing.JFrame {
                 String classNa = rs.getString("class");
                 String frequency = rs.getString("frequency");
                 String no_installments = rs.getString("no_installments");
+                
+                String statusString = (status.equals("0")) ? "Pending" : "Rejected";
 
-                String row [] = new String[] {count+"" , chitti_id , actual_amount, classNa, frequency, no_installments, each_installation_amount, pending_amount};
+                String row[] = new String[]{count + "", chitti_id, actual_amount, classNa, statusString, no_installments, each_installation_amount, rejected_reason};
                 model.addRow(row);
             }
 
@@ -74,7 +76,7 @@ public class MyChitList extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Sl.No", "Chit No", "Chit Value", "Class", "Frequency", "No.Of Intallment", "Each instalment", "Due Amount"
+                "Sl.No", "Chit No", "Chit Value", "Class", "Status", "No.Of Intallment", "Each instalment", "Comment"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -140,20 +142,20 @@ public class MyChitList extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MyChitList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ChitListStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MyChitList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ChitListStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MyChitList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ChitListStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MyChitList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ChitListStatus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MyChitList().setVisible(true);
+                new ChitListStatus().setVisible(true);
             }
         });
     }
