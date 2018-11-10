@@ -75,7 +75,7 @@ CREATE TABLE `chitti_apply` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `chitti_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `created_at` date DEFAULT NULL,
+  `created_at` varchar(100) DEFAULT NULL,
   `status` int(11) DEFAULT '0' COMMENT '0 - no checked , 1 - approved, 2 - rejected',
   `nominee_name` varchar(100) DEFAULT NULL,
   `nominee_relationship` varchar(100) DEFAULT NULL,
@@ -85,10 +85,19 @@ CREATE TABLE `chitti_apply` (
   `pending_amount` float DEFAULT NULL,
   `amount_payed` float DEFAULT NULL,
   `rejected_reason` varchar(500) DEFAULT NULL,
+  `actual_amount` float DEFAULT NULL,
+  `each_installation_amount` float DEFAULT NULL,
+  `chit_name` varchar(100) DEFAULT NULL,
+  `class` varchar(10) DEFAULT NULL,
+  `frequency` varchar(30) DEFAULT NULL,
+  `no_installments` int(11) DEFAULT NULL,
+  `amount_withdrawed` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `chitti_apply` */
+
+insert  into `chitti_apply`(`id`,`chitti_id`,`user_id`,`created_at`,`status`,`nominee_name`,`nominee_relationship`,`nominee_mob_num`,`nominee_address`,`nominee_photo`,`pending_amount`,`amount_payed`,`rejected_reason`,`actual_amount`,`each_installation_amount`,`chit_name`,`class`,`frequency`,`no_installments`,`amount_withdrawed`) values (1,1,1,'1541829080876',2,NULL,NULL,NULL,NULL,NULL,234,0,'blahhh',234,432,'Soubagya kuti','A','Monthly',NULL,NULL),(2,1,1,'1541829703287',1,NULL,NULL,NULL,NULL,NULL,234,0,NULL,234,432,'Soubagya kuti','A','Monthly',3,NULL);
 
 /*Table structure for table `chittis` */
 
@@ -141,8 +150,14 @@ DROP TABLE IF EXISTS `house_loan`;
 CREATE TABLE `house_loan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
-  `employment_type` varchar(50) DEFAULT NULL,
+  `nominee_address` varchar(500) DEFAULT NULL,
+  `nominee_mobile` varchar(20) DEFAULT NULL,
+  `nominee_email` varchar(100) DEFAULT NULL,
+  `nominee_relation` varchar(100) DEFAULT NULL,
+  `nominee_age` int(11) DEFAULT NULL,
+  `nominee_name` varchar(100) DEFAULT NULL,
   `designation` varchar(100) DEFAULT NULL,
+  `employment_type` varchar(50) DEFAULT NULL,
   `employer_name` varchar(100) DEFAULT NULL,
   `department` varchar(100) DEFAULT NULL,
   `retirement_age` int(11) DEFAULT NULL,
@@ -153,17 +168,20 @@ CREATE TABLE `house_loan` (
   `company_pincode` varchar(10) DEFAULT NULL,
   `company_state` varchar(100) DEFAULT NULL,
   `company_country` varchar(100) DEFAULT NULL,
-  `salary_amount` float DEFAULT NULL,
-  `salary_doc` blob,
-  `self_employeed-doc` blob,
-  `registration_certificate` blob,
-  `proof_of_investment` blob,
+  `salary` float DEFAULT NULL,
   `amount` float DEFAULT NULL,
   `loan_status` int(11) DEFAULT '0' COMMENT '0 - applied, 1 - approved for user, 2 - user approved with amount, 3 - rejected',
+  `loadAmountRequired` float DEFAULT NULL,
+  `created_at` varchar(100) DEFAULT NULL,
+  `sanctioned_amount` float DEFAULT NULL,
+  `sanctioned_date` varchar(100) DEFAULT NULL,
+  `remark` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `house_loan` */
+
+insert  into `house_loan`(`id`,`user_id`,`nominee_address`,`nominee_mobile`,`nominee_email`,`nominee_relation`,`nominee_age`,`nominee_name`,`designation`,`employment_type`,`employer_name`,`department`,`retirement_age`,`official_email`,`company_name`,`company_phone_num`,`company_address`,`company_pincode`,`company_state`,`company_country`,`salary`,`amount`,`loan_status`,`loadAmountRequired`,`created_at`,`sanctioned_amount`,`sanctioned_date`,`remark`) values (1,1,'some address','8787878787','kk@gmail.com','Father',18,'thomas',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,345355,NULL,NULL,NULL,NULL),(2,1,'asdasd','234234234','zsdsad','Father',18,'asdasd','sdf','sdf','sdf','sdf',35,'sdf',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,54555600,NULL,5455560,'1542825000000','good boy'),(3,1,'sdf','sdf','sdf','Father',18,'sdf','dsf','sdf','sdf','sdf',35,'sdf','sdf','sdfsdf','sdf','454','sdfsdf','sdfdsf',34,NULL,0,344444,NULL,NULL,NULL,NULL),(4,1,'fsdfsd','sdfs','sdf','Father',18,'','','','','',35,'','','','','0','','',0,NULL,0,1000,NULL,NULL,NULL,'');
 
 /*Table structure for table `payments` */
 
@@ -212,7 +230,7 @@ CREATE TABLE `user_details` (
 
 /*Data for the table `user_details` */
 
-insert  into `user_details`(`id`,`name`,`mob_num`,`email_id`,`user_name`,`password`,`present_address`,`dob`,`city`,`occupation`,`gender`,`permanent_address`,`district`,`pincode`,`land_number`,`annual_income`,`father_name`,`state`,`marriatal_status`,`employer_details`) values (1,'ramu','34543534','dfsdf','ramu','123','sdfsd','1541442600000',NULL,'Salaried','male','sdf','dsfsdf','345345',NULL,2,NULL,'Assam','married','sdfsdfsddsf');
+insert  into `user_details`(`id`,`name`,`mob_num`,`email_id`,`user_name`,`password`,`present_address`,`dob`,`city`,`occupation`,`gender`,`permanent_address`,`district`,`pincode`,`land_number`,`annual_income`,`father_name`,`state`,`marriatal_status`,`employer_details`) values (1,'ramu','545454545','dfsfd@gmail.com','ramu','123','new per adress','1541442600000','Ernakulam','Salaried','female','new address','dsfsdf','345345','5454545454',2,NULL,'Assam','married','sdfsdfsddsf');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
