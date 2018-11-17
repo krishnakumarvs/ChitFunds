@@ -336,6 +336,8 @@ public class AdminHomepge extends javax.swing.JFrame {
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
+        
+        //HouseLoanStatusAdmin  approve = new HouseLoanStatusAdmin();
         HousingLoanApprove approve = new HousingLoanApprove();
         approve.setVisible(true);
         this.dispose();
