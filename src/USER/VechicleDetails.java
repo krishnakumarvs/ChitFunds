@@ -5,6 +5,9 @@
  */
 package USER;
 
+import db.Dbcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author USER
@@ -73,6 +76,7 @@ public class VechicleDetails extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -135,6 +139,8 @@ public class VechicleDetails extends javax.swing.JFrame {
 
         jLabel18.setText("Loan Period");
 
+        jLabel11.setText("(in months)");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -144,13 +150,9 @@ public class VechicleDetails extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
-                        .addGap(50, 50, 50)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5)
-                        .addGap(53, 53, 53)
+                        .addGap(355, 355, 355)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jXDatePicker2, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                            .addComponent(jXDatePicker2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTextField2)
                             .addComponent(jTextField10)
                             .addComponent(jXDatePicker1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -158,12 +160,6 @@ public class VechicleDetails extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel18)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(59, 59, 59)
-                                .addComponent(jRadioButton1)
-                                .addGap(26, 26, 26)
-                                .addComponent(jRadioButton2))
                             .addComponent(jLabel17)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,8 +179,13 @@ public class VechicleDetails extends javax.swing.JFrame {
                                             .addComponent(jLabel10)
                                             .addComponent(jLabel12)
                                             .addComponent(jLabel9))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addComponent(jLabel3))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jRadioButton1)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jRadioButton2))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
@@ -193,17 +194,24 @@ public class VechicleDetails extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jTextField3)
                                             .addComponent(jTextField4)
-                                            .addComponent(jXDatePicker3, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                                            .addComponent(jXDatePicker3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jTextField5)
                                             .addComponent(jTextField6)
-                                            .addComponent(jTextField7)
-                                            .addComponent(jTextField8)
-                                            .addComponent(jTextField9))
-                                        .addGap(18, 18, 18)
+                                            .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel13)
-                                            .addComponent(jLabel15)
-                                            .addComponent(jLabel7))))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel7)
+                                                    .addComponent(jLabel5)
+                                                    .addComponent(jLabel15)
+                                                    .addComponent(jLabel13)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(4, 4, 4)
+                                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -263,7 +271,8 @@ public class VechicleDetails extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -288,20 +297,21 @@ public class VechicleDetails extends javax.swing.JFrame {
             String comapnyName = jTextField1.getText();
             String dealerName = jTextField2.getText();
             String registerationNumber = jTextField3.getText();
-            String registerationDate;
+            String registerationDate = "";
             if (jXDatePicker2.getDate() != null) {
                 registerationDate = jXDatePicker2.getDate().getTime() + "";
             }
             String carModel = jTextField4.getText();
             String engineNumber = jTextField10.getText();
-            String permitExpiryDate;
+
+            String permitExpiryDate= "";
             if (jXDatePicker3.getDate() != null) {
                 permitExpiryDate = jXDatePicker3.getDate().getTime() + "";
             }
 
             String insuranceCompany = jTextField5.getText();
-            String insuranceExpiryDate;
 
+            String insuranceExpiryDate = "";
             if (jXDatePicker1.getDate() != null) {
                 insuranceExpiryDate = jXDatePicker1.getDate().getTime() + "";
             }
@@ -311,7 +321,32 @@ public class VechicleDetails extends javax.swing.JFrame {
             String loanAmountApplied = jTextField8.getText();
             String loanPeriod = jTextField9.getText();
 
+            String query = "update car_loan set "
+                    + " carType='" + carType + "' , "
+                    + " carComapnyName='" + carType + "' , "
+                    + " dealerName='" + dealerName + "' , "
+                    + " registerationNumber='" + registerationNumber + "' , "
+                    + " registerationDate='" + registerationDate + "' , "
+                    + " carModel='" + carModel + "' , "
+                    + " engineNumber='" + engineNumber + "' , "
+                    + " permitExpiryDate='" + permitExpiryDate + "' , "
+                    + " insuranceCompany='" + insuranceCompany + "' , "
+                    + " insuranceExpiryDate='" + insuranceExpiryDate + "' , "
+                    + " insurancePremium='" + insurancePremium + "' , "
+                    + " vehiclePrice='" + vehiclePrice + "' , "
+                    + " loanAmountApplied='" + loanAmountApplied + "' , "
+                    + " loanPeriod='" + loanPeriod + "'  "
+                    + ""
+                    + " where id=" + loanId
+                    + "";
             
+            System.out.println("query " + query);
+            new Dbcon().update(query);
+            JOptionPane.showMessageDialog(rootPane, "Successfully applied");
+            new UserHomepage().setVisible(true);
+            this.dispose();
+            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -373,6 +408,7 @@ public class VechicleDetails extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;

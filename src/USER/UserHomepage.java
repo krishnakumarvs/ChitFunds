@@ -74,7 +74,10 @@ public class UserHomepage extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
-        jMenuItem30 = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMenuItem27 = new javax.swing.JMenuItem();
+        jMenuItem28 = new javax.swing.JMenuItem();
+        jMenuItem29 = new javax.swing.JMenuItem();
         jMenuItem19 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
@@ -272,13 +275,33 @@ public class UserHomepage extends javax.swing.JFrame {
 
         jMenu7.setText("VERIFICATION STATUS");
 
-        jMenuItem30.setText("Loan");
-        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+        jMenu8.setText("Loan");
+
+        jMenuItem27.setText("House Loan");
+        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem30ActionPerformed(evt);
+                jMenuItem27ActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem30);
+        jMenu8.add(jMenuItem27);
+
+        jMenuItem28.setText("Gold Loan");
+        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem28ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem28);
+
+        jMenuItem29.setText("Car Loan");
+        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem29ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem29);
+
+        jMenu7.add(jMenu8);
 
         jMenuItem19.setText("Chit");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
@@ -488,13 +511,6 @@ public class UserHomepage extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
-    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
-        // TODO add your handling code here:
-        LoanStatus status = new LoanStatus();
-        status.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jMenuItem30ActionPerformed
-
     private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
 
         LoginPage login = new LoginPage();
@@ -509,6 +525,31 @@ public class UserHomepage extends javax.swing.JFrame {
         this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
+
+        HouseLoanStatus status = new HouseLoanStatus();
+        status.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem27ActionPerformed
+
+    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+
+        GoldLoanStatus status = new GoldLoanStatus();
+        status.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
+
+        
+        CarLoanStatus status = new CarLoanStatus();
+        status.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem29ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -559,6 +600,7 @@ public class UserHomepage extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -579,8 +621,10 @@ public class UserHomepage extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem24;
     private javax.swing.JMenuItem jMenuItem25;
     private javax.swing.JMenuItem jMenuItem26;
+    private javax.swing.JMenuItem jMenuItem27;
+    private javax.swing.JMenuItem jMenuItem28;
+    private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;

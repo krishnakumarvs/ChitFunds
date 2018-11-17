@@ -14,14 +14,15 @@ import javax.swing.JOptionPane;
  *
  * @author USER
  */
-public class VechicleLoan extends javax.swing.JFrame {
+public class GoldLoanNominee extends javax.swing.JFrame {
 
     /**
      * Creates new form VechicleLoan
      */
-    public VechicleLoan() {
+    public GoldLoanNominee() {
         initComponents();
         this.setLocationRelativeTo(null);
+        loaduserDetails();
     }
 
     private void loaduserDetails() {
@@ -233,7 +234,7 @@ public class VechicleLoan extends javax.swing.JFrame {
         String nominee_email = jTextField6.getText();
         String nominee_relaString = jComboBox1.getSelectedItem().toString();
 
-        String query = "insert into car_loan (user_id, nominee_name,nominee_age,nominee_relation,nominee_email,"
+        String query = "insert into gold_loan (user_id, nominee_name,nominee_age,nominee_relation,nominee_email,"
                 + "nominee_mobile,created_at, nominee_address) values ("
                 + " '" + UserHomepage.userId + "', "
                 + " '" + nominee_name + "', "
@@ -250,11 +251,11 @@ public class VechicleLoan extends javax.swing.JFrame {
         try {
             int insert = db.insert(query);
             if (insert > 0) {
-                ResultSet rs = db.select("select max(id) from car_loan");
+                ResultSet rs = db.select("select max(id) from gold_loan");
                 if (rs.next()) {
                     String loanId = rs.getString(1);
 
-                    VechicleDetails details = new VechicleDetails(loanId);
+                    GoldLoanReg details = new GoldLoanReg(loanId);
                     details.setVisible(true);
                     this.dispose();
                 }
@@ -268,7 +269,7 @@ public class VechicleLoan extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        VechicleloanHomePage homepage = new VechicleloanHomePage();
+        GoldLoanHomePage homepage = new GoldLoanHomePage();
         homepage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -290,20 +291,20 @@ public class VechicleLoan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VechicleLoan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GoldLoanNominee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VechicleLoan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GoldLoanNominee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VechicleLoan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GoldLoanNominee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VechicleLoan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GoldLoanNominee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VechicleLoan().setVisible(true);
+                new GoldLoanNominee().setVisible(true);
             }
         });
     }
