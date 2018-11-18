@@ -30,7 +30,7 @@ public class GoldLoanApprove extends javax.swing.JFrame {
     private void loadHouseLoanDetails() {
         jButton2.setEnabled(false);
         try {
-            jButton3.setEnabled(false);
+            //jButton3.setEnabled(false);
             SharedServices.clearRows(jTable1);
             ResultSet rs = new Dbcon().select("SELECT user_details.name AS user_name, user_details.id AS user_id, gold_loan.* FROM gold_loan ,user_details WHERE gold_loan.status=0 AND gold_loan.user_id = user_details.id and user_details.name like '%" + jTextField2.getText() + "%'");
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();

@@ -173,6 +173,7 @@ public class ViewGoldLoanDoc extends javax.swing.JFrame {
                 String query = "update gold_loan set "
                         + ""
                         + " amount_approved = '" + sanctionedAmount + "' , "
+                        + " amount_remaining_to_pay = '" + sanctionedAmount + "' , "
                         + " approved_date = '" + santionedDate + "' , "
                         + " rejected_reason = '" + remark + "' , "
                         + " status= 1 "
