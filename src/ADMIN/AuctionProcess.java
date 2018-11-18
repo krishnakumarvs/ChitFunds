@@ -16,9 +16,10 @@ import shared.SharedServices;
  * @author USER
  */
 public class AuctionProcess extends javax.swing.JFrame {
-    
+
     String selectedChit;
     String auctionId;
+    String selectedUserId;
 
     /**
      * Creates new form AuctionProcess
@@ -26,17 +27,40 @@ public class AuctionProcess extends javax.swing.JFrame {
     public AuctionProcess() {
         initComponents();
     }
-    
+
     Dbcon dbb = new Dbcon();
-    
+
     public AuctionProcess(String selectedChit) {
         initComponents();
         this.selectedChit = selectedChit;
+        jButton1.setEnabled(false);
         setLocationRelativeTo(null);
         startAution();
         fetchAuctionDetails();
+        new TimerThread().start();
     }
-    
+
+    boolean runThread = true;
+
+    class TimerThread extends Thread {
+
+        public void run() {
+
+            try {
+                while (runThread) {
+                    fetchAuctionDetails();
+                    Thread.sleep(1000);
+
+                    System.out.println("Therad running ");
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
     private void startAution() {
         try {
             new Dbcon().insert("insert into auction (chitti_id,auction_started_time) values ("
@@ -53,28 +77,29 @@ public class AuctionProcess extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-    
+
     private void fetchAuctionDetails() {
         try {
-            
-            String query = "select live.*, user.name as user_name from live_auction as live, user_details as user where live.auction_id=" + auctionId + " and user.id = live.user_id";
-            
+
+            String query = "select live.*,user.id as user_id, user.name as user_name from live_auction as live, user_details as user where live.auction_id=" + auctionId + " and user.id = live.user_id";
+
             ResultSet rs = dbb.select(query);
-            
+
             SharedServices.clearRows(jTable1);
             int count = 0;
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            
+
             SharedServices.clearRows(jTable1);
-            
+
             while (rs.next()) {
                 count++;
                 String amount = rs.getString("amount");
                 String user_name = rs.getString("user_name");
-                
-                model.addRow(new String[]{count + "", user_name, amount});
+                String user_id = rs.getString("user_id");
+
+                model.addRow(new String[]{count + "", user_name, amount, user_id});
             }
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -102,9 +127,14 @@ public class AuctionProcess extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No", "Logined Subscribers", "Amount"
+                "No", "Logined Subscribers", "Amount", "User Id"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
@@ -122,7 +152,7 @@ public class AuctionProcess extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Refresh");
+        jButton3.setText("Stop auction");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -163,14 +193,21 @@ public class AuctionProcess extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        WinnerDetails winner = new WinnerDetails();
-        winner.setVisible(true);
-        this.dispose();
+
+        try {
+
+            new Dbcon().update("update auction set auction_winner_id=" + selectedUserId + " , status=3 where id = " + auctionId);
+
+            WinnerDetails winner = new WinnerDetails(selectedUserId);
+            winner.setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+
     private void disableAuction() {
         try {
             new Dbcon().update("update auction set status = 1 where id = " + auctionId);
@@ -178,9 +215,10 @@ public class AuctionProcess extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-    
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+
+        runThread = false;
         disableAuction();
         // TODO add your handling code here:
         AdminHomepge admin = new AdminHomepge();
@@ -189,10 +227,20 @@ public class AuctionProcess extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
-        fetchAuctionDetails();
+
+        runThread = false;
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+
+        selectedUserId = jTable1.getModel().getValueAt(jTable1.getSelectedRow(), 3).toString();
+
+        if (!runThread) {
+            jButton1.setEnabled(true);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments

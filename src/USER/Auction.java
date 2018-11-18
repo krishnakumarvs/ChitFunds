@@ -17,6 +17,7 @@ import shared.SharedServices;
 public class Auction extends javax.swing.JFrame {
 
     String auctionId;
+    boolean runThread = true;
 
     /**
      * Creates new form Auction
@@ -25,12 +26,33 @@ public class Auction extends javax.swing.JFrame {
         initComponents();
     }
 
+    class TimerThread extends Thread {
+
+        public void run() {
+
+            try {
+                while (runThread) {
+                    fetchAuctionDetails();
+                    Thread.sleep(1000);
+
+                    System.out.println("Therad running ");
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+    
     public Auction(String auctionId) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.auctionId = auctionId;
         enterAuctionLive();
-        //fetchMyAuctionDetails();
+        fetchAuctionDetails();
+        new TimerThread().start();
+        
     }
 
     Dbcon dbb = new Dbcon();
@@ -94,7 +116,6 @@ public class Auction extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
         jSpinner1 = new javax.swing.JSpinner();
-        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -134,13 +155,6 @@ public class Auction extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Refresh");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,8 +171,6 @@ public class Auction extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -186,8 +198,7 @@ public class Auction extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
 
@@ -196,6 +207,7 @@ public class Auction extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
+        runThread = false;
         deleteLive();
         // TODO add your handling code here:
         UserHomepage home = new UserHomepage();
@@ -213,12 +225,6 @@ public class Auction extends javax.swing.JFrame {
         }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
-        fetchAuctionDetails();
-// TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void deleteLive() {
         try {
@@ -274,7 +280,6 @@ public class Auction extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
