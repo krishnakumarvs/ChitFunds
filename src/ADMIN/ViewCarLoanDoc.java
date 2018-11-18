@@ -155,6 +155,7 @@ public class ViewCarLoanDoc extends javax.swing.JFrame {
                 String query = "update car_loan set "
                         + ""
                         + " amount_approved = '" + sanctionedAmount + "' , "
+                        + " amount_remaining_to_pay = '" + sanctionedAmount + "' , "
                         + " sanctioned_date= '" + santionedDate + "' , "
                         + " rejection_reason = '" + remark + "' , "
                         + " status= 1 "

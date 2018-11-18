@@ -43,7 +43,7 @@ public class CarLoanApprove extends javax.swing.JFrame {
                 String user_id = rs.getString("user_id");
 
                 String loadAmountRequired = rs.getString("loanAmountApplied");
-                String interest = "18%";
+                String interest = "4%";
                 String tenrure = "25";
                 String appliedDate = rs.getString("created_at");
                 String status = "Pending";

@@ -163,6 +163,7 @@ public class ViewHousingLoanDoc extends javax.swing.JFrame {
                 String query = "update house_loan set "
                         + ""
                         + " sanctioned_amount = '" + sanctionedAmount + "' , "
+                        + " amount_remaining_to_pay = '" + sanctionedAmount + "' , "
                         + " sanctioned_date= '" + santionedDate + "' , "
                         + " remark = '" + remark + "' , "
                         + " loan_status= 1 "
