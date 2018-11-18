@@ -48,7 +48,6 @@ public class AdminHomepge extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem27 = new javax.swing.JMenuItem();
         jMenuItem29 = new javax.swing.JMenuItem();
-        jMenuItem30 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -138,14 +137,6 @@ public class AdminHomepge extends javax.swing.JFrame {
             }
         });
         jMenu3.add(jMenuItem29);
-
-        jMenuItem30.setText("Today's Auction");
-        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem30ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem30);
 
         jMenuBar1.add(jMenu3);
 
@@ -357,13 +348,6 @@ public class AdminHomepge extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem21ActionPerformed
 
-    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
-        // TODO add your handling code here:
-        TodaysAuction toadaysauction = new TodaysAuction();
-        toadaysauction.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jMenuItem30ActionPerformed
-
     private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
         // TODO add your handling code here:
         AuctionDetails auctiondetails = new AuctionDetails();
@@ -455,7 +439,6 @@ public class AdminHomepge extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
