@@ -459,7 +459,7 @@ public class UserHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        HousingLoanPayment payment = new HousingLoanPayment();
+        HouseLoanPayment payment = new HouseLoanPayment();
         payment.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
@@ -545,7 +545,6 @@ public class UserHomepage extends javax.swing.JFrame {
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
 
-        
         CarLoanStatus status = new CarLoanStatus();
         status.setVisible(true);
         this.dispose();

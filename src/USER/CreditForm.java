@@ -168,6 +168,10 @@ public class CreditForm extends javax.swing.JFrame {
                 String updateQuer = "update car_loan set amount_remaining_to_pay = amount_remaining_to_pay - " + amount + " where id = " + loanId;
                 System.out.println("updateQuer " + updateQuer);
                 new Dbcon().update(updateQuer);
+            } else if (paymentType.equals("house")) {
+                String updateQuer = "update house_loan set amount_remaining_to_pay = amount_remaining_to_pay - " + amount + " where id = " + loanId;
+                System.out.println("updateQuer " + updateQuer);
+                new Dbcon().update(updateQuer);
             }
             
             
