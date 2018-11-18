@@ -440,7 +440,7 @@ public class UserHomepage extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
 
-        Auction auction = new Auction();
+        SelectAuction auction = new SelectAuction();
         auction.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
