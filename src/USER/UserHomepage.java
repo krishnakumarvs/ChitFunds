@@ -5,6 +5,9 @@
  */
 package USER;
 
+import java.awt.Desktop;
+import java.io.File;
+
 /**
  *
  * @author USER
@@ -12,11 +15,14 @@ package USER;
 public class UserHomepage extends javax.swing.JFrame {
 
     static String userId;
+    static String name;
 
     /**
      * Creates new form userHomepage
      */
     public UserHomepage() {
+        this.userId=userId;
+        this.name=name;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -53,17 +59,14 @@ public class UserHomepage extends javax.swing.JFrame {
         jMenuItem25 = new javax.swing.JMenuItem();
         jMenuItem26 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem29 = new javax.swing.JMenuItem();
+        jMenuItem31 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -73,12 +76,17 @@ public class UserHomepage extends javax.swing.JFrame {
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem32 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenu10 = new javax.swing.JMenu();
+        jMenuItem34 = new javax.swing.JMenuItem();
+        jMenuItem33 = new javax.swing.JMenuItem();
+        jMenuItem30 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
         jMenuItem27 = new javax.swing.JMenuItem();
         jMenuItem28 = new javax.swing.JMenuItem();
-        jMenuItem29 = new javax.swing.JMenuItem();
-        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
 
@@ -131,59 +139,20 @@ public class UserHomepage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 153, 153));
 
-        jButton3.setText("Search Chit");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/USER/user2.jpg"))); // NOI18N
 
-        jLabel2.setText("My Profile");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
-
-        jLabel3.setText("My Chit List");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-
-        jLabel5.setText("Auction");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
-
-        jLabel1.setText("Payment History");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
-
-        jLabel4.setText("My Pending Approval");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-
-        jMenu3.setText("HOME");
+        jMenu3.setText("Home");
         jMenuBar2.add(jMenu3);
 
-        jMenu4.setText("CHIT");
+        jMenu4.setText("Chit");
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
-        jMenuItem1.setText("Chit Group");
+        jMenuItem1.setText("Search Chit Group");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -193,11 +162,34 @@ public class UserHomepage extends javax.swing.JFrame {
 
         jMenuItem2.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
         jMenuItem2.setText("How does a Chit Work");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem2);
+
+        jMenuItem29.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
+        jMenuItem29.setText(" My Chit List");
+        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem29ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem29);
+
+        jMenuItem31.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
+        jMenuItem31.setText("Auction");
+        jMenuItem31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem31ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem31);
 
         jMenuBar2.add(jMenu4);
 
-        jMenu5.setText("LOAN");
+        jMenu5.setText("Loan");
 
         jMenuItem4.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
         jMenuItem4.setText("Housing Loan");
@@ -209,7 +201,7 @@ public class UserHomepage extends javax.swing.JFrame {
         jMenu5.add(jMenuItem4);
 
         jMenuItem5.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
-        jMenuItem5.setText("Vechicle Loan");
+        jMenuItem5.setText("Car Loan");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -228,7 +220,7 @@ public class UserHomepage extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu5);
 
-        jMenu1.setText("PAYMENT");
+        jMenu1.setText("Payment");
         jMenu1.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
@@ -239,6 +231,7 @@ public class UserHomepage extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem3.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
         jMenuItem3.setText("Chit ");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,6 +240,7 @@ public class UserHomepage extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem3);
 
+        jMenuItem8.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
         jMenuItem8.setText("Housing Loan");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,7 +249,8 @@ public class UserHomepage extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem8);
 
-        jMenuItem9.setText("Vechicle Loan");
+        jMenuItem9.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
+        jMenuItem9.setText("Car Loan");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem9ActionPerformed(evt);
@@ -263,6 +258,7 @@ public class UserHomepage extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem9);
 
+        jMenuItem10.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
         jMenuItem10.setText("Gold Loan");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,38 +267,20 @@ public class UserHomepage extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem10);
 
+        jMenuItem32.setFont(new java.awt.Font("Times New Roman", 0, 15)); // NOI18N
+        jMenuItem32.setText("Payment History");
+        jMenuItem32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem32ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem32);
+
         jMenuBar2.add(jMenu1);
 
-        jMenu7.setText("VERIFICATION STATUS");
+        jMenu7.setText("Verification Status");
 
-        jMenu8.setText("Loan");
-
-        jMenuItem27.setText("House Loan");
-        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem27ActionPerformed(evt);
-            }
-        });
-        jMenu8.add(jMenuItem27);
-
-        jMenuItem28.setText("Gold Loan");
-        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem28ActionPerformed(evt);
-            }
-        });
-        jMenu8.add(jMenuItem28);
-
-        jMenuItem29.setText("Car Loan");
-        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem29ActionPerformed(evt);
-            }
-        });
-        jMenu8.add(jMenuItem29);
-
-        jMenu7.add(jMenu8);
-
+        jMenuItem19.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jMenuItem19.setText("Chit");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,13 +289,66 @@ public class UserHomepage extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem19);
 
+        jMenu10.setText("Loan");
+
+        jMenuItem34.setText("Gold Loan");
+        jMenuItem34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem34ActionPerformed(evt);
+            }
+        });
+        jMenu10.add(jMenuItem34);
+
+        jMenuItem33.setText("Housing Loan");
+        jMenuItem33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem33ActionPerformed(evt);
+            }
+        });
+        jMenu10.add(jMenuItem33);
+
+        jMenuItem30.setText("Car Loan");
+        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem30ActionPerformed(evt);
+            }
+        });
+        jMenu10.add(jMenuItem30);
+
+        jMenu7.add(jMenu10);
+
         jMenuBar2.add(jMenu7);
 
+        jMenu8.setText("Profile");
+
+        jMenuItem27.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jMenuItem27.setText("My Profile");
+        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem27ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem27);
+
+        jMenuItem28.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jMenuItem28.setText("Change Password");
+        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem28ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem28);
+
+        jMenuBar2.add(jMenu8);
+
+        jMenu9.setText("Compliant");
+        jMenuBar2.add(jMenu9);
+
         jMenu2.setBackground(new java.awt.Color(255, 102, 255));
-        jMenu2.setText("CONTACT US");
+        jMenu2.setText("Contact Us");
         jMenuBar2.add(jMenu2);
 
-        jMenu6.setText("LOGOUT");
+        jMenu6.setText("Logout");
         jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jMenu6MouseClicked(evt);
@@ -341,40 +372,11 @@ public class UserHomepage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(454, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(135, 135, 135))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 587, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(23, 23, 23))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -414,38 +416,6 @@ public class UserHomepage extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
-        SearchChit chit = new SearchChit();
-        chit.setVisible(true);
-        this.dispose();
-// TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-
-        MyProfile profile = new MyProfile();
-        profile.setVisible(true);
-        this.dispose();
-// TODO add your handling code here:
-    }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-
-        MyChitList list = new MyChitList();
-        list.setVisible(true);
-        this.dispose();
-// TODO add your handling code here:
-    }//GEN-LAST:event_jLabel3MouseClicked
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-
-        SelectAuction auction = new SelectAuction();
-        auction.setVisible(true);
-        this.dispose();
-// TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
-
     private void jMenu1MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu1MenuSelected
 
 // TODO add your handling code here:
@@ -459,15 +429,14 @@ public class UserHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        HouseLoanPayment payment = new HouseLoanPayment();
+        HousingLoanPayment payment = new HousingLoanPayment();
         payment.setVisible(true);
         this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-
-        VehicleLoanPayment payment = new VehicleLoanPayment();
+        VechicleLoanPayment payment = new VechicleLoanPayment();
         payment.setVisible(true);
         this.dispose();
 
@@ -481,13 +450,6 @@ public class UserHomepage extends javax.swing.JFrame {
         this.dispose();
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem10ActionPerformed
-
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        // TODO add your handling code here:
-        PaymentHistory history = new PaymentHistory();
-        history.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jMenu6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu6ActionPerformed
 
@@ -507,9 +469,9 @@ public class UserHomepage extends javax.swing.JFrame {
 
     private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
         // TODO add your handling code here:
-        AccountVerificationStatus status = new AccountVerificationStatus();
-        status.setVisible(true);
-        this.dispose();
+       ChitListStatus chitstatus=new ChitListStatus();
+       chitstatus.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
     private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
@@ -520,36 +482,88 @@ public class UserHomepage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu6MouseClicked
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-
-        new ChitListStatus().setVisible(true);
-        this.dispose();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel4MouseClicked
-
     private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
-
-        HouseLoanStatus status = new HouseLoanStatus();
-        status.setVisible(true);
-        this.dispose();
         // TODO add your handling code here:
+       MyProfile profile = new MyProfile();
+       profile.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMenuItem27ActionPerformed
 
-    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
-
-        GoldLoanStatus status = new GoldLoanStatus();
-        status.setVisible(true);
-        this.dispose();
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem28ActionPerformed
+        
+        MyChitList list = new MyChitList();
+        list.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jMenuItem32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem32ActionPerformed
+        // TODO add your handling code here:
+        PaymentHistory history = new PaymentHistory();
+        history.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem32ActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
+        // TODO add your handling code here:
+        MyChitList chitlist=new MyChitList();
+        chitlist.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem29ActionPerformed
 
-        CarLoanStatus status = new CarLoanStatus();
+    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+        // TODO add your handling code here:
+       ChangePassword change=new ChangePassword();
+       change.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        
+        if(Desktop.isDesktopSupported())
+        {
+            try
+            {
+                File file=new File("F:\\CHIT Works.pdf");
+                Desktop.getDesktop().open(file);
+                
+            }
+            catch(Exception e)
+            {
+                System.out.println(e.toString());
+            }
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem31ActionPerformed
+        // TODO add your handling code here:
+        Auction auction=new Auction();
+        auction.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem31ActionPerformed
+
+    private void jMenuItem34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem34ActionPerformed
+        // TODO add your handling code here:
+        GoldLoanStatus status=new GoldLoanStatus();
         status.setVisible(true);
         this.dispose();
+                
+    }//GEN-LAST:event_jMenuItem34ActionPerformed
+
+    private void jMenuItem33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem33ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem29ActionPerformed
+        HousingLoanstatus loanstatus=new HousingLoanstatus();
+        loanstatus.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem33ActionPerformed
+
+    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
+        // TODO add your handling code here:
+        carloanstatus carstatus=new carloanstatus();
+        carstatus.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem30ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -587,13 +601,9 @@ public class UserHomepage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -601,6 +611,7 @@ public class UserHomepage extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -625,6 +636,11 @@ public class UserHomepage extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem30;
+    private javax.swing.JMenuItem jMenuItem31;
+    private javax.swing.JMenuItem jMenuItem32;
+    private javax.swing.JMenuItem jMenuItem33;
+    private javax.swing.JMenuItem jMenuItem34;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;

@@ -5,7 +5,6 @@
  */
 package ADMIN;
 
-import USER.VechicleDetails;
 
 /**
  *
@@ -40,7 +39,8 @@ public class AdminHomepge extends javax.swing.JFrame {
         jMenuItem22 = new javax.swing.JMenuItem();
         jMenuItem28 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        panel1 = new java.awt.Panel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu8 = new javax.swing.JMenu();
         jMenu9 = new javax.swing.JMenu();
@@ -50,6 +50,7 @@ public class AdminHomepge extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem27 = new javax.swing.JMenuItem();
         jMenuItem29 = new javax.swing.JMenuItem();
+        jMenuItem30 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -58,6 +59,9 @@ public class AdminHomepge extends javax.swing.JFrame {
         jMenuItem18 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
@@ -85,9 +89,23 @@ public class AdminHomepge extends javax.swing.JFrame {
 
         jMenuItem2.setText("jMenuItem2");
 
-        jMenuItem8.setText("jMenuItem8");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ADMIN/IMG-20181021-WA000888888888.jpg"))); // NOI18N
+        jLabel1.setToolTipText("");
+
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         jMenu8.setText("Add Details");
 
@@ -145,6 +163,14 @@ public class AdminHomepge extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem29);
 
+        jMenuItem30.setText("Today's Auction");
+        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem30ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem30);
+
         jMenuBar1.add(jMenu3);
 
         jMenu2.setText("Approvel Pending");
@@ -197,15 +223,48 @@ public class AdminHomepge extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu4.setText("View");
+        jMenu4.setText("View Customers");
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
 
-        jMenuItem1.setText("ViewCustomers");
+        jMenuItem1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jMenuItem1.setText("HousingLoan");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
             }
         });
         jMenu4.add(jMenuItem1);
+
+        jMenuItem9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jMenuItem9.setText("Gold Loan");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem9);
+
+        jMenuItem8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jMenuItem8.setText("Car Loan");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem8);
+
+        jMenuItem10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jMenuItem10.setText("Chit");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem10);
 
         jMenuBar1.add(jMenu4);
 
@@ -245,12 +304,7 @@ public class AdminHomepge extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu1.setText("logout");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
-            }
-        });
+        jMenu1.setText("Logout");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu1ActionPerformed(evt);
@@ -264,11 +318,11 @@ public class AdminHomepge extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -347,8 +401,6 @@ public class AdminHomepge extends javax.swing.JFrame {
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
-        
-        //HouseLoanStatusAdmin  approve = new HouseLoanStatusAdmin();
         HousingLoanApprove approve = new HousingLoanApprove();
         approve.setVisible(true);
         this.dispose();
@@ -367,6 +419,13 @@ public class AdminHomepge extends javax.swing.JFrame {
         addchit.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem21ActionPerformed
+
+    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
+        // TODO add your handling code here:
+        TodaysAuction toadaysauction = new TodaysAuction();
+        toadaysauction.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem30ActionPerformed
 
     private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
         // TODO add your handling code here:
@@ -390,25 +449,48 @@ public class AdminHomepge extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-//         ViewAllCustomers customers=new ViewAllCustomers();
-//        customers.setVisible(true);
-//        this.dispose();
+       HousingLoanCustomers customers=new HousingLoanCustomers();
+       customers.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-
-        new AdminLogin().setVisible(true);
-        this.dispose();
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu1MouseClicked
+        GoldLoanCustomers loancus=new GoldLoanCustomers();
+        loancus.setVisible(true);
+        this.dispose();
+       
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+         CarLoanCustomers customers=new CarLoanCustomers();
+        customers.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        GoldLoanCustomers loan=new GoldLoanCustomers();
+        loan.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-
-        new AdminLogin().setVisible(true);
-        this.dispose();
         // TODO add your handling code here:
+        AdminLogin login=new AdminLogin();
+        login.setVisible(true);
+        this.dispose();
+                
+        
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        ChitCustomers chit=new ChitCustomers();
+        chit.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -446,6 +528,7 @@ public class AdminHomepge extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu2;
@@ -457,6 +540,7 @@ public class AdminHomepge extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
@@ -475,10 +559,13 @@ public class AdminHomepge extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
+    private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }

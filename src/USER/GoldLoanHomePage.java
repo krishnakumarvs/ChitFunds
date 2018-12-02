@@ -6,8 +6,8 @@
 
 package USER;
 
-import db.Dbcon;
 import java.sql.ResultSet;
+import db.Dbcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,25 +20,43 @@ public class GoldLoanHomePage extends javax.swing.JFrame {
      * Creates new form GoldLoanHomePage
      */
     public GoldLoanHomePage() {
-        initComponents();
+           initComponents();
           this.setLocationRelativeTo(null);
-          fetchGoldRate();
+          jTextField1.setEditable(false);
+          goldrate();
     }
+    
+    private void goldrate()
+    {
+        try
+            {
+          ResultSet rs = new Dbcon().select("select max(rate_id)as rate_id from gold_rate ");
+           String gold_id = "";
+            if (rs.next())
+                {
 
-    private void fetchGoldRate() {
-        float goldRate = 0;
-        try {
-            ResultSet rs = new Dbcon().select("SELECT *  FROM gold_rate WHERE id = (SELECT MAX(id)  FROM gold_rate )");
-            if(rs.next()) {
-                jTextField1.setText(rs.getString("rate"));
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Gold rate is not entered by admin.");
-                new UserHomepage().setVisible(true);
-                this.dispose();
+                   gold_id=rs.getString("rate_id");
+                
+                   
+                ResultSet rs1 = new Dbcon().select("select * from gold_rate where rate_id='"+ gold_id+"'");
+               if(rs1.next())
+               {
+                    String rate=rs1.getString("rate");
+                    jTextField1.setText(rate);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(rootPane, "admin not enterd current gold rate");
+                }
+                }
+            
+                
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            
+            catch(Exception e)
+            {
+                System.out.println(e);
+            }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -81,9 +99,9 @@ public class GoldLoanHomePage extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Today's Gold Rate");
-
-        jTextField1.setEditable(false);
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Today's Gold Rate(Per Gram)");
 
         jMenu1.setText("FEATURES");
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,18 +141,20 @@ public class GoldLoanHomePage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)))
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,11 +163,11 @@ public class GoldLoanHomePage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
 
         pack();
@@ -186,14 +206,9 @@ public class GoldLoanHomePage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-
-        GoldLoanNominee goldLoanNominee =  new GoldLoanNominee();
-        goldLoanNominee.setVisible(true);
-        dispose();
-        
-//        GoldLoanReg goldloan=new GoldLoanReg();
-//        goldloan.setVisible(true);
-//        this.dispose();
+        GoldLoanReg goldloan=new GoldLoanReg();
+        goldloan.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

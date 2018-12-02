@@ -3,20 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package USER;
+
+import static USER.UserHomepage.userId;
 
 /**
  *
  * @author USER
  */
 public class VechicleloanHomePage extends javax.swing.JFrame {
+     
+    
 
     /**
      * Creates new form VechicleloanHomePage
      */
     public VechicleloanHomePage() {
+       
+        
         initComponents();
-        this.setLocationRelativeTo(null);
+          this.setLocationRelativeTo(null);
     }
 
     /**
@@ -91,20 +98,20 @@ public class VechicleloanHomePage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(23, 23, 23)
                 .addComponent(jButton2)
-                .addGap(31, 31, 31)
+                .addGap(45, 45, 45)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
 
         pack();
@@ -112,41 +119,41 @@ public class VechicleloanHomePage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        UserHomepage user = new UserHomepage();
+        UserHomepage user=new UserHomepage();
         user.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         // TODO add your handling code here:
-        VechicleLoanFeatures features = new VechicleLoanFeatures();
+         VechicleLoanFeatures features=new VechicleLoanFeatures();
         features.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenu1MouseClicked
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-        VechicleLoanEligibility eligibility = new VechicleLoanEligibility();
+       VechicleLoanEligibility eligibility=new VechicleLoanEligibility();
         eligibility.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenu2MouseClicked
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
-        VechicleLoanRequiredDoc required = new VechicleLoanRequiredDoc();
+       VechicleLoanRequiredDoc required=new VechicleLoanRequiredDoc();
         required.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
         // TODO add your handling code here:
-        VechicleLoanEligibility eligible = new VechicleLoanEligibility();
+        VechicleLoanEligibility eligible=new VechicleLoanEligibility();
         eligible.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenu4MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        VechicleLoan vechicleloan = new VechicleLoan();
-        vechicleloan.setVisible(true);
+        VechicleLoan loan=new VechicleLoan();
+        loan.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

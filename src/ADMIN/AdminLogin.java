@@ -7,7 +7,6 @@
 package ADMIN;
 
 import USER.FirstPage;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -55,10 +54,6 @@ public class AdminLogin extends javax.swing.JFrame {
             }
         });
 
-        jPasswordField1.setText("admin");
-
-        jTextField3.setText("admin");
-
         jButton2.setText("Home");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,9 +74,9 @@ public class AdminLogin extends javax.swing.JFrame {
                     .addComponent(jTextField3)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addComponent(jButton1))))
                 .addContainerGap(114, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -99,7 +94,7 @@ public class AdminLogin extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -107,25 +102,19 @@ public class AdminLogin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
-        
-        if(jTextField3.getText().trim().equals("admin") && jPasswordField1.getText().trim().equals("admin")) {
-            AdminHomepge homepage = new AdminHomepge();
-            homepage.setVisible(true);
-            this.dispose();    
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Incorrect details");
-        }
-        
-        
+        AdminHomepge homepage=new AdminHomepge();
+        homepage.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        FirstPage page = new FirstPage();
+        // TODO add your handling code here:
+       
+         FirstPage page = new FirstPage();
         page.setVisible(true);
         this.dispose();
-        // TODO add your handling code here:
+                
+                
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

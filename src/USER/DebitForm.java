@@ -99,9 +99,8 @@ public class DebitForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      Bill bill=new Bill();
-      bill.setVisible(true);
-      this.dispose();
+     
+        
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

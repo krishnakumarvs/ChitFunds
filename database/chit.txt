@@ -22,15 +22,12 @@ DROP TABLE IF EXISTS `auction`;
 CREATE TABLE `auction` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `chitti_id` int(11) DEFAULT NULL,
-  `auction_started_time` varchar(100) NOT NULL,
+  `auction_started_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `auction_winner_id` int(11) DEFAULT NULL,
-  `status` int(11) DEFAULT '0' COMMENT '0-started, 1 stopped',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `auction` */
-
-insert  into `auction`(`id`,`chitti_id`,`auction_started_time`,`auction_winner_id`,`status`) values (8,1,'1542539674652',2,3),(9,1,'1542539871705',2,1);
 
 /*Table structure for table `auction_apply` */
 
@@ -65,35 +62,10 @@ CREATE TABLE `car_loan` (
   `status` int(11) DEFAULT '0' COMMENT '0 - applied, 1 - approved for user, 2 - user approved with amount, 3 - rejected',
   `rejection_reason` varchar(500) DEFAULT NULL,
   `loan_amount` float DEFAULT NULL,
-  `nominee_name` varchar(100) DEFAULT NULL,
-  `nominee_age` int(11) DEFAULT NULL,
-  `nominee_relation` varchar(100) DEFAULT NULL,
-  `nominee_email` varchar(100) DEFAULT NULL,
-  `nominee_mobile` varchar(20) DEFAULT NULL,
-  `created_at` varchar(100) DEFAULT NULL,
-  `nominee_address` varchar(100) DEFAULT NULL,
-  `carType` varchar(100) DEFAULT NULL,
-  `carComapnyName` varchar(100) DEFAULT NULL,
-  `dealerName` varchar(100) DEFAULT NULL,
-  `registerationNumber` varchar(100) DEFAULT NULL,
-  `registerationDate` varchar(100) DEFAULT NULL,
-  `carModel` varchar(100) DEFAULT NULL,
-  `engineNumber` varchar(100) DEFAULT NULL,
-  `permitExpiryDate` varchar(100) DEFAULT NULL,
-  `insuranceCompany` varchar(100) DEFAULT NULL,
-  `insuranceExpiryDate` varchar(100) DEFAULT NULL,
-  `insurancePremium` float DEFAULT NULL,
-  `vehiclePrice` float DEFAULT NULL,
-  `loanAmountApplied` float DEFAULT NULL,
-  `loanPeriod` int(11) DEFAULT NULL,
-  `amount_approved` float DEFAULT NULL,
-  `sanctioned_date` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `car_loan` */
-
-insert  into `car_loan`(`id`,`user_id`,`category`,`car_model`,`car_varient`,`car_brand`,`total_car_cost`,`id_proof`,`car_document`,`maximum_amount`,`status`,`rejection_reason`,`loan_amount`,`nominee_name`,`nominee_age`,`nominee_relation`,`nominee_email`,`nominee_mobile`,`created_at`,`nominee_address`,`carType`,`carComapnyName`,`dealerName`,`registerationNumber`,`registerationDate`,`carModel`,`engineNumber`,`permitExpiryDate`,`insuranceCompany`,`insuranceExpiryDate`,`insurancePremium`,`vehiclePrice`,`loanAmountApplied`,`loanPeriod`,`amount_approved`,`sanctioned_date`) values (5,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,'asdasdasdasdas',NULL,'rrrrrrr',18,'Father','fsdfsdfsdfsd','444444444444444','1542465703112','rrrrrrrrrrr','new','new','','23434','','werwer','234','','werwer','1541615400000',234,34,234,34,12,'1541356200000');
 
 /*Table structure for table `chitti_apply` */
 
@@ -121,11 +93,11 @@ CREATE TABLE `chitti_apply` (
   `no_installments` int(11) DEFAULT NULL,
   `amount_withdrawed` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `chitti_apply` */
 
-insert  into `chitti_apply`(`id`,`chitti_id`,`user_id`,`created_at`,`status`,`nominee_name`,`nominee_relationship`,`nominee_mob_num`,`nominee_address`,`nominee_photo`,`pending_amount`,`amount_payed`,`rejected_reason`,`actual_amount`,`each_installation_amount`,`chit_name`,`class`,`frequency`,`no_installments`,`amount_withdrawed`) values (1,1,1,'1541829080876',2,NULL,NULL,NULL,NULL,NULL,234,0,'blahhh',234,432,'Soubagya kuti','A','Monthly',NULL,NULL),(2,1,1,'1541829703287',1,NULL,NULL,NULL,NULL,NULL,234,0,NULL,234,432,'Soubagya kuti','A','Monthly',3,NULL),(3,1,1,'1542512039295',0,NULL,NULL,NULL,NULL,NULL,234,0,NULL,234,432,'Soubagya kuti','A','Monthly',3,NULL),(4,1,2,'1542531358772',1,NULL,NULL,NULL,NULL,NULL,234,0,NULL,234,432,'Soubagya kuti','A','Monthly',3,NULL);
+insert  into `chitti_apply`(`id`,`chitti_id`,`user_id`,`created_at`,`status`,`nominee_name`,`nominee_relationship`,`nominee_mob_num`,`nominee_address`,`nominee_photo`,`pending_amount`,`amount_payed`,`rejected_reason`,`actual_amount`,`each_installation_amount`,`chit_name`,`class`,`frequency`,`no_installments`,`amount_withdrawed`) values (1,1,1,'1541829080876',2,NULL,NULL,NULL,NULL,NULL,234,0,'blahhh',234,432,'Soubagya kuti','A','Monthly',NULL,NULL),(2,1,1,'1541829703287',1,NULL,NULL,NULL,NULL,NULL,234,0,NULL,234,432,'Soubagya kuti','A','Monthly',3,NULL);
 
 /*Table structure for table `chittis` */
 
@@ -156,47 +128,20 @@ DROP TABLE IF EXISTS `gold_loan`;
 CREATE TABLE `gold_loan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
-  `status` int(11) DEFAULT '0' COMMENT '0 - applied, 1 - approved for user, 2 - user approved with amount, 3 - rejected',
-  `rejected_reason` varchar(500) DEFAULT NULL,
+  `loan_amount` float DEFAULT NULL,
   `nominee_name` varchar(100) DEFAULT NULL,
-  `nominee_age` int(11) DEFAULT NULL,
-  `nominee_relation` varchar(100) DEFAULT NULL,
-  `nominee_email` varchar(100) DEFAULT NULL,
-  `nominee_mobile` varchar(20) DEFAULT NULL,
-  `created_at` varchar(100) DEFAULT NULL,
+  `nominee_relationship` varchar(20) DEFAULT NULL,
+  `nominee_mob_number` varchar(10) DEFAULT NULL,
   `nominee_address` varchar(500) DEFAULT NULL,
-  `interest_rate` float DEFAULT NULL,
-  `gold_rate` float DEFAULT NULL,
-  `frequency` varchar(30) DEFAULT NULL,
-  `gold_weight` float DEFAULT NULL,
   `gold_ornaments` varchar(500) DEFAULT NULL,
+  `total_weight` float DEFAULT NULL,
   `maximum_amount` float DEFAULT NULL,
-  `amount_required` float DEFAULT NULL,
-  `amount_approved` float DEFAULT NULL,
-  `approved_date` varchar(100) DEFAULT NULL,
-  `amount_remaining_to_pay` float DEFAULT NULL,
+  `status` int(11) DEFAULT NULL COMMENT '0 - applied, 1 - approved for user, 2 - user approved with amount, 3 - rejected',
+  `rejected_reason` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `gold_loan` */
-
-insert  into `gold_loan`(`id`,`user_id`,`status`,`rejected_reason`,`nominee_name`,`nominee_age`,`nominee_relation`,`nominee_email`,`nominee_mobile`,`created_at`,`nominee_address`,`interest_rate`,`gold_rate`,`frequency`,`gold_weight`,`gold_ornaments`,`maximum_amount`,`amount_required`,`amount_approved`,`approved_date`,`amount_remaining_to_pay`) values (4,1,1,'dsa','asd',34,'Father','sdf','23423423','1542541817314','sdfdsf',4,3000,'Monthly',5,'',12000,5000,4900,'1542738600000',3904);
-
-/*Table structure for table `gold_rate` */
-
-DROP TABLE IF EXISTS `gold_rate`;
-
-CREATE TABLE `gold_rate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rate` float DEFAULT NULL,
-  `createdDate` varchar(100) DEFAULT NULL,
-  `notes` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
-/*Data for the table `gold_rate` */
-
-insert  into `gold_rate`(`id`,`rate`,`createdDate`,`notes`) values (1,5,'1542431065913','hi'),(2,3,'1542432151249','bye'),(3,3000,'1542432165648','no discount');
 
 /*Table structure for table `house_loan` */
 
@@ -232,25 +177,11 @@ CREATE TABLE `house_loan` (
   `sanctioned_date` varchar(100) DEFAULT NULL,
   `remark` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `house_loan` */
 
-insert  into `house_loan`(`id`,`user_id`,`nominee_address`,`nominee_mobile`,`nominee_email`,`nominee_relation`,`nominee_age`,`nominee_name`,`designation`,`employment_type`,`employer_name`,`department`,`retirement_age`,`official_email`,`company_name`,`company_phone_num`,`company_address`,`company_pincode`,`company_state`,`company_country`,`salary`,`amount`,`loan_status`,`loadAmountRequired`,`created_at`,`sanctioned_amount`,`sanctioned_date`,`remark`) values (1,1,'some address','8787878787','kk@gmail.com','Father',18,'thomas',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,345355,NULL,NULL,NULL,NULL),(2,1,'asdasd','234234234','zsdsad','Father',18,'asdasd','sdf','sdf','sdf','sdf',35,'sdf',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,54555600,NULL,5455560,'1542825000000','good boy'),(3,1,'sdf','sdf','sdf','Father',18,'sdf','dsf','sdf','sdf','sdf',35,'sdf','sdf','sdfsdf','sdf','454','sdfsdf','sdfdsf',34,NULL,0,344444,NULL,NULL,NULL,NULL),(4,1,'fsdfsd','sdfs','sdf','Father',18,'','','','','',35,'','','','','0','','',0,NULL,0,1000,NULL,NULL,NULL,''),(5,1,'dfg','5464','gdfg','Father',18,'dgf',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,'1541950882819',NULL,NULL,NULL);
-
-/*Table structure for table `live_auction` */
-
-DROP TABLE IF EXISTS `live_auction`;
-
-CREATE TABLE `live_auction` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `auction_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `amount` float DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
-
-/*Data for the table `live_auction` */
+insert  into `house_loan`(`id`,`user_id`,`nominee_address`,`nominee_mobile`,`nominee_email`,`nominee_relation`,`nominee_age`,`nominee_name`,`designation`,`employment_type`,`employer_name`,`department`,`retirement_age`,`official_email`,`company_name`,`company_phone_num`,`company_address`,`company_pincode`,`company_state`,`company_country`,`salary`,`amount`,`loan_status`,`loadAmountRequired`,`created_at`,`sanctioned_amount`,`sanctioned_date`,`remark`) values (1,1,'some address','8787878787','kk@gmail.com','Father',18,'thomas',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,345355,NULL,NULL,NULL,NULL),(2,1,'asdasd','234234234','zsdsad','Father',18,'asdasd','sdf','sdf','sdf','sdf',35,'sdf',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,54555600,NULL,5455560,'1542825000000','good boy'),(3,1,'sdf','sdf','sdf','Father',18,'sdf','dsf','sdf','sdf','sdf',35,'sdf','sdf','sdfsdf','sdf','454','sdfsdf','sdfdsf',34,NULL,0,344444,NULL,NULL,NULL,NULL),(4,1,'fsdfsd','sdfs','sdf','Father',18,'','','','','',35,'','','','','0','','',0,NULL,0,1000,NULL,NULL,NULL,'');
 
 /*Table structure for table `payments` */
 
@@ -262,15 +193,12 @@ CREATE TABLE `payments` (
   `loan_type` varchar(20) DEFAULT NULL COMMENT 'house, car, gold, chitti',
   `amount` float DEFAULT NULL,
   `payment_type` varchar(20) DEFAULT NULL COMMENT 'debit,credit',
-  `created_date` varchar(100) DEFAULT NULL,
+  `created_date` date DEFAULT NULL,
   `loan_id` int(11) DEFAULT NULL,
-  `payment_status` int(11) DEFAULT '0' COMMENT '0 not payed, 1 sucess',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `payments` */
-
-insert  into `payments`(`id`,`user_id`,`loan_type`,`amount`,`payment_type`,`created_date`,`loan_id`,`payment_status`) values (3,1,'gold',500,'credit','1542544909363',4,1),(4,1,'gold',400,'credit','1542544962577',4,1),(5,1,'gold',100,'debit','1542544995351',4,1),(6,1,'gold',1000,'credit','1542545475518',4,1),(7,1,'gold',575.2,'credit','1542545671155',4,1),(8,1,'gold',996,'debit','1542545800497',4,1);
 
 /*Table structure for table `user_details` */
 
@@ -298,11 +226,11 @@ CREATE TABLE `user_details` (
   `marriatal_status` varchar(20) DEFAULT NULL,
   `employer_details` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `user_details` */
 
-insert  into `user_details`(`id`,`name`,`mob_num`,`email_id`,`user_name`,`password`,`present_address`,`dob`,`city`,`occupation`,`gender`,`permanent_address`,`district`,`pincode`,`land_number`,`annual_income`,`father_name`,`state`,`marriatal_status`,`employer_details`) values (1,'ramu','545454545','dfsfd@gmail.com','ramu','123','new per adress','1541442600000','Ernakulam','Salaried','female','new address','dsfsdf','345345','5454545454',2,NULL,'Assam','married','sdfsdfsddsf'),(2,'tom','3434343434','','tom','123','asdasd','1541356200000',NULL,'Salaried','male','asdsad','asdasd','',NULL,0,NULL,'Assam','married','sdf');
+insert  into `user_details`(`id`,`name`,`mob_num`,`email_id`,`user_name`,`password`,`present_address`,`dob`,`city`,`occupation`,`gender`,`permanent_address`,`district`,`pincode`,`land_number`,`annual_income`,`father_name`,`state`,`marriatal_status`,`employer_details`) values (1,'ramu','545454545','dfsfd@gmail.com','ramu','123','new per adress','1541442600000','Ernakulam','Salaried','female','new address','dsfsdf','345345','5454545454',2,NULL,'Assam','married','sdfsdfsddsf');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

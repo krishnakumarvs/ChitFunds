@@ -23,14 +23,6 @@ public class FinancialOrgForChitFunds {
         FirstPage page=new FirstPage();
         page.setVisible(true);
         
-        
-    }
-    
-    class TimerThread  extends Thread {
-        
-        public void run() {
-            
-        }
     }
     
 }
